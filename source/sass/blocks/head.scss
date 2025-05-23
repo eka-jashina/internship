@@ -1,0 +1,39 @@
+.head {
+  padding: 32px 0;
+}
+
+.head__container {
+  position: relative;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head__nav {
+  display: none;
+}
+
+.head__nav--active {
+  position: absolute;
+  top: 68px;
+  right: 100px;
+  z-index: 10;
+
+  display: block;
+  padding: 35px 25px;
+  min-width: 286px;
+
+  background-color: #316DC2;
+  border-radius: 16px;
+}
+
+.head__menu-toggle {
+  @include button-style-light;
+
+  min-width: 136px;
+}
+
+.head__menu-toggle--active {
+  min-width: 286px;
+}

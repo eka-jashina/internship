@@ -4,27 +4,450 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
+    <title>Проект "Стажировка"</title>
+    <meta name="description" content="«Стажировка» — совместный проект правительств и волонтёрских бригад.">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+  <body class="body">
+    <header class="header">
+      <section class="head section">
+          <div class="head__container container">
+              <img class="head__logo" src="img/content/logo.svg" width="52" height="52" type="image/svg+xml" alt="Логотип: синяя ученическая шапочка в белом круге">
+              <button class="head__menu-toggle" type="button">Меню</button>
+              <nav class="head__nav nav">
+                  <ul class="nav__list">
+                      <li class="nav__category">
+                          <a class="nav__link" href="#">О проекте</a>
+                      </li>
+                      <li class="nav__category">
+                          <button class="nav__button" type="button">Программы</button>
+                          <ul class="nav__sublist">
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Стажировки</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Волонтёрство</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Учёба</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Религия</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav__category">
+                          <a class="nav__link" href="#">как поехать</a>
+                      </li>
+                      <li class="nav__category">
+                          <a class="nav__link" href="#">отзывы</a>
+                      </li>
+                      <li class="nav__category">
+                          <button class="nav__button" type="button">Новости</button>
+                          <ul class="nav__sublist">
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">общее</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Волонтёрство</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Стажировки</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">Карьера</a>
+                              </li>
+                              <li class="nav__subcategory">
+                                  <a class="nav__link" href="#">путешествия</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav__category">
+                          <a class="nav__link" href="#">контакты</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </section>
+      <section class="hero section">
+          <div class="container">
+              <div class="hero__swiper">
+                  <div class="hero__wrapper">
+                      <div class="hero__slide hero__slide--1">
+                          <h2 class="hero__title section__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+                          <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                          <a class="hero__link" href="#">подробнее</a>
+                      </div>
+                      <div class="hero__slide hero__slide--2">
+                          <h2 class="hero__title section__title">Волонтёрские программы – внесите свой вклад в общество</h2>
+                          <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                          <a class="hero__link" href="#">подробнее</a>
+                      </div>
+                      <div class="hero__slide hero__slide--3">
+                          <h2 class="hero__title section__title">Программы стажировок в крупнейших компаниях мира/h2>
+                          <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                          <a class="hero__link" href="#">подробнее</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="about section">
+          <div class="about__container container">
+              <div class="about__head">
+                  <h2 class="section__title">О проекте «Стажировка»</h2>
+                  <p>«Стажировка» — совместный проект правительств и волонтёрских бригад.</p>
+              </div>
+              <div class="about__goal">
+                  <h3>Наша цель</h3>
+                  <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать значимые изменения.</p>
+                  <button class="about__button" type="button">подробнее о проекте</button>
+              </div>
+              <div class="about__features features">
+                  <dl class="features__list">
+                      <div class="features__item">
+                          <dt>Более 250 программ</dt>
+                          <dd>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</dd>
+                      </div>
+                      <div class="features__item">
+                          <dt>Более 3000 участников</dt>
+                          <dd>уже успешно прошли программу от «Стажировка» и остались в разных странах</dd>
+                      </div>
+                      <div class="features__item">
+                          <dt>участники из 60 стран</dt>
+                          <dd>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</dd>
+                      </div>
+                      <div class="features__item">
+                          <dt>от 4 200 $ до 8 400 $</dt>
+                          <dd>грант всем участникам для комфортного прохождения программы</dd>
+                      </div>
+                  </dl>
+              </div>
+          </div>
+      </section>
+      <section class="programs section">
+          <div class="container">
+              <h2 class="section__title">Программы</h2>
+              <div class="programs__swiper">
+                  <ul class="programs__list">
+                      <li class="programs__item program program--internship">
+                          <h3 class="program__title">Стажировки</h3>
+                          <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                      <li class="programs__item program program--volunteering">
+                          <h3 class="program__title">Волонтёрство</h3>
+                          <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                      <li class="programs__item program program--study">
+                          <h3 class="program__title">Учёба</h3>
+                          <p>Получите образование и измените своё будущее.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                      <li class="programs__item program program--volunteering">
+                          <h3 class="program__title">Волонтёрство</h3>
+                          <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                      <li class="programs__item program program--study">
+                          <h3 class="program__title">Учёба</h3>
+                          <p>Получите образование и измените своё будущее.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                      <li class="programs__item program program--internship">
+                          <h3 class="program__title">Стажировки</h3>
+                          <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                          <a class="program__link" href="#">
+                              <span class="visually-hidden">Подробнее</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <a class="programs__link" href="#">все программы</a>
+          </div>
+      </section>
+      <section class="grant section">
+          <div class="container">
+              <div class="grant__head">
+                  <h2 class="section__title">Как поехать</h2>
+                  <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+              </div>
+              <div class="grant__steps">
+                  <p class="grant__accent-text">Чтобы получить грант на обучение, вам нужно:</p>
+                  <ol class="grant__list">
+                      <li class="grant__item">Быть в возрасте от 16 до 30 лет</li>
+                      <li class="grant__item">Иметь оконченное среднее образование</li>
+                      <li class="grant__item">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</li>
+                      <li class="grant__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</li>
+                  </ol>
+              </div>
+          </div>
+      </section>
+      <section class="news section">
+          <div class="container">
+              <h2 class="section__title">Новости и материалы</h2>
+              <ul class="news__topic-list">
+                  <li class="news__topic">
+                      <button class="news__button">общее</button>
+                  </li>
+                  <li class="news__topic">
+                      <button class="news__button">Волонтёрство</button>
+                  </li>
+                  <li class="news__topic">
+                      <button class="news__button">Стажировки</button>
+                  </li>
+                  <li class="news__topic">
+                      <button class="news__button">Карьера</button>
+                  </li>
+                  <li class="news__topic">
+                      <button class="news__button">путешествия</button>
+                  </li>
+              </ul>
+              <ul class="news__list">
+                  <li class="news__item news-item">
+                      <span class="news-item__date">23/03/2023</span>
+                      <h3 class="news-item__title">Интервью с участницей программы стажировки</h3>
+                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                      <button class="news-item__button">
+                          <span class="visually-hidden">Подробнее</span>
+                      </button>
+                  </li>
+                  <li class="news__item news-item">
+                      <span class="news-item__date">20/03/2023</span>
+                      <h3 class="news-item__title">Путешествуем по миру</h3>
+                      <p>Какие места посещают наши студенты весной</p>
+                      <button class="news-item__button">
+                          <span class="visually-hidden">Подробнее</span>
+                      </button>
+                  </li>
+                  <li class="news__item news-item">
+                      <span class="news-item__date">17/03/2023</span>
+                      <h3 class="news-item__title">Новая программа волонтёрства</h3>
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <button class="news-item__button">
+                          <span class="visually-hidden">Подробнее</span>
+                      </button>
+                  </li>
+                  <li class="news__item news-item">
+                      <span class="news-item__date">10/03/2023</span>
+                      <h3 class="news-item__title">Построй свою карьеру</h3>
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <button class="news-item__button">
+                          <span class="visually-hidden">Подробнее</span>
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      </section>
+      <section class="faq section">
+          <div class="container">
+              <ul class="faq__list">
+                  <li class="faq__item">
+                      <button class="faq__question" type="button">
+                          <span>Кто организатор? Какие сроки у программы?</span>
+                      </button>
+                      <div class="faq__answer">
+                          <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+                      </div>
+                  </li>
+                  <li class="faq__item">
+                      <button class="faq__question" type="button">
+                          <span>Что такое грант на обучение?</span>
+                      </button>
+                      <div class="faq__answer">
+                          <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
+                      </div>
+                  </li>
+                  <li class="faq__item">
+                      <button class="faq__question" type="button">
+                          <span>Как определяется стоимость программы?</span>
+                      </button>
+                      <div class="faq__answer">
+                          <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+                      </div>
+                  </li>
+                  <li class="faq__item">
+                      <button class="faq__question" type="button">
+                          <span>Признаётся ли учёба в рамках проекта для дальнейшего обучения?</span>
+                      </button>
+                      <div class="faq__answer">
+                          <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+                      </div>
+                  </li>
+                  <li class="faq__item">
+                      <button class="faq__question" type="button">
+                          <span>Как выглядит полный процесс регистрации на программу «Стажировка»?</span>
+                      </button>
+                      <div class="faq__answer">
+                          <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </section>
+      <section class="reviews section">
+          <div class="container">
+              <div class="reviews__swiper">
+                  <ul class="reviews__list">
+                      <li class="reviews__item review">
+                          <div class="review__author">
+                              <div class="review__profile">
+                                  <img class="review__photo" src="" alt="">
+                                  <span class="review__name">Лола Алекс</span>
+                              </div>
+                              <dl class="review__study">
+                                  <div>
+                                      <dt class="review__program">программа</dt>
+                                      <dd>Masa Art Challenge</dd>
+                                  </div>
+                                  <div>
+                                      <dt class="review__date">Дата</dt>
+                                      <dd>Осень 2022</dd>
+                                  </div>
+                              </dl>
+                          </div>
+                          <p class="review__accent-text">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
+                          <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+                      </li>
+                      <li class="reviews__item review">
+                          <div class="review__author">
+                              <div class="review__profile">
+                                  <img class="review__photo" src="" alt="">
+                                  <span class="review__name">Давид Иванов</span>
+                              </div>
+                              <dl class="review__study">
+                                  <div>
+                                      <dt class="review__program">программа</dt>
+                                      <dd>Volunteer Chance</dd>
+                                  </div>
+                                  <div>
+                                      <dt class="review__date">Дата</dt>
+                                      <dd>Лето 2022</dd>
+                                  </div>
+                              </dl>
+                          </div>
+                          <p class="review__accent-text">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
+                          <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+      <section class="contacts section">
+          <div class="contacts__container container">
+              <h2 class="section__title">Контакты</h2>
+              <dl class="contacts__list">
+                  <div class="contacts__item">
+                      <dt class="contacts__name">центральный офис</dt>
+                      <dd class="contacts__info">г. Новосибирск, ул. Щетинкина 68, культурный центр</dd>
+                  </div>
+                  <div class="contacts__item">
+                      <dt class="contacts__name">Телефон</dt>
+                      <dd class="contacts__info">
+                          <a class="contacts__link" href="tel:+796387687676">+7 963 876 876 76</a>
+                      </dd>
+                  </div>
+                  <div class="contacts__item">
+                      <dt class="contacts__name">Email</dt>
+                      <dd class="contacts__info">
+                          <a class="contacts__link" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+                      </dd>
+                  </div>
+              </dl>
+              <img class="contacts__map" src="" alt="">
+          </div>
+      </section>
+      <section class="callback section">
+          <div class="callback__container container">
+              <h2 class="section__title">Напишите нам</h2>
+              <p class="callback__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+              <form class="callback__form form" method="post" action="">
+                  <label class="form__label" for="name">Имя</label>
+                  <input class="form__input" type="text" name="name" id="name">
+                  <label class="form__label" for="tel">Телефон</label>
+                  <input class="form__input" type="tel" name="tel" id="tel">
+                  <label class="form__label" for="text">Ваше сообщение</label>
+                  <textarea class="form__input" name="text" id="text" rows="3"></textarea>
+                  <label class="form__label" for="city">Выберите город</label>
+                  <select class="form__select" name="city" id="city">
+                      <option class="form__option" value=""></option>
+                      <option class="form__option" value="petersburg">Санкт-Петербург</option>
+                      <option class="form__option" value="samara">Самара</option>
+                      <option class="form__option" value="perm">Пермь</option>
+                      <option class="form__option" value="novosibirsk">Новосибирск</option>
+                  </select>
+                  <div class="form__agreement">
+                      <label class="form__agreement-text" for="agreement">Я согласен на обработку моих персональных данных</label>
+                      <input class="form__agreement-check" type="checkbox" name="agreement" id="agreement">
+                  </div>
+                  <button class="form__submit" type="submit">отправить</button>
+              </form>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+          <div class="footer__menu">
+              <img class="footer__logo" src="" alt="">
+              <ul class="footer__nav nav">
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">О проекте</a>
+                  </li>
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">Программы</a>
+                  </li>
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">Как поехать</a>
+                  </li>
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">Отзывы</a>
+                  </li>
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">Новости</a>
+                  </li>
+                  <li class="nav__item">
+                      <a class="nav__link" href="#">Контакты</a>
+                  </li>
+              </ul>
+              <ul class="footrr__socials">
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">
+                          <span class="visually-hidden">Мы во ВКонтакте</span>
+                      </a>
+                  </li>
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">
+                          <span class="visually-hidden">Мы в Одноклассниках</span>
+                      </a>
+                  </li>
+                  <li class="socials__item">
+                      <a class="socials__link" href="#">
+                          <span class="visually-hidden">Мы на Reddit</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer__juristic-info">
+              <span class="footer__copyright">Стажировка © 2023 Все права защищены</span>
+              <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          </div>
+      </div>
+    </footer>
+
     <script type="module" src="js/main.js"></script>
   </body>
 

@@ -1,0 +1,76 @@
+// RESET
+
+@mixin button-reset {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+@mixin button-style {
+  @include button-reset;
+
+  position: relative;
+
+  padding: 21px;
+  padding-right: 51px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  border-radius: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+
+    width: 46px;
+    height: 46px;
+
+    transform: translateY(-50%)
+  }
+
+  &::before {
+    background-color: #316DC2;
+    border-radius: 50%;
+  }
+
+  &::after {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 8px;
+  background-image: url("/__spritemap#sprite-menu-open-view");
+  }
+}
+
+@mixin button-style-light {
+  @include button-style;
+
+  color: #316DC2;
+
+  background-color: #ffffff;
+  border: 1px solid #316DC2;
+}
