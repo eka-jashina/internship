@@ -1,0 +1,18 @@
+.header {
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.header:has(.hero__slide--1.swiper-slide-active) {
+  background-image: url("../../img/decor/hero/hero-slide-1-desktop@1x.jpg");
+}
+
+.header:has(.hero__slide--2.swiper-slide-active) {
+  background-image: url("../../img/decor/hero/hero-slide-2-desktop@1x.jpg");
+}
+
+.header:has(.hero__slide--3.swiper-slide-active) {
+  background-image: url("../../img/decor/hero/hero-slide-3-desktop@1x.jpg");
+}

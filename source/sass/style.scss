@@ -1,5 +1,6 @@
 // VENDOR
 @import "vendor/normalize";
+@import 'swiper/css';
 
 // COMMON
 @import "common/fonts";
@@ -8,6 +9,8 @@
 @import "common/global";
 
 // BLOCKS
+@import "blocks/header";
 @import "blocks/head";
 @import "blocks/nav";
+@import "blocks/hero"
 
