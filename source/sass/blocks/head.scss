@@ -34,14 +34,21 @@
 
   z-index: 10;
 
-  min-width: 136px;
+  padding-right: 67px;
 
   &::after {
     mask-size: 18px 8px;
     mask-image: url("/__spritemap#sprite-menu-open-view");
+
+    transition: mask-image 0.3s ease-in-out;
   }
 }
 
 .head__menu-toggle--active {
   min-width: 286px;
+
+  &::after {
+    mask-size: 20px 20px;
+    mask-image: url("/__spritemap#sprite-menu-close-view");
+  }
 }

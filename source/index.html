@@ -116,66 +116,74 @@
               <div class="about__features features">
                   <dl class="features__list">
                       <div class="features__item">
-                          <dt>Более 250 программ</dt>
-                          <dd>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</dd>
+                          <div class="features__content">
+                                <dt>Более 250 программ</dt>
+                                <dd>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</dd>
+                          </div>
                       </div>
                       <div class="features__item">
-                          <dt>Более 3000 участников</dt>
-                          <dd>уже успешно прошли программу от «Стажировка» и остались в разных странах</dd>
+                          <div class="features__content">
+                                <dt>Более 3000 участников</dt>
+                                <dd>уже успешно прошли программу от «Стажировка» и остались в разных странах</dd>
+                          </div>   
                       </div>
                       <div class="features__item">
-                          <dt>участники из 60 стран</dt>
-                          <dd>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</dd>
+                          <div class="features__content">
+                                <dt>участники из 60 стран</dt>
+                                <dd>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</dd>
+                          </div>
                       </div>
                       <div class="features__item">
-                          <dt>от 4 200 $ до 8 400 $</dt>
-                          <dd>грант всем участникам для комфортного прохождения программы</dd>
+                          <div class="features__content">
+                                <dt>от 4 200 $ до 8 400 $</dt>
+                                <dd>грант всем участникам для комфортного прохождения программы</dd>
+                          </div>
                       </div>
                   </dl>
               </div>
           </div>
       </section>
       <section class="programs section">
-          <div class="container">
-              <h2 class="section__title">Программы</h2>
+          <div class="programs__container container">
+              <h2 class="programs__title section__title">Программы</h2>
               <div class="programs__swiper">
-                  <ul class="programs__list">
-                      <li class="programs__item program program--internship">
+                  <ul class="programs__list swiper-wrapper">
+                      <li class="programs__item program program--internship swiper-slide">
                           <h3 class="program__title">Стажировки</h3>
                           <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                           <a class="program__link" href="#">
                               <span class="visually-hidden">Подробнее</span>
                           </a>
                       </li>
-                      <li class="programs__item program program--volunteering">
+                      <li class="programs__item program program--volunteering swiper-slide">
                           <h3 class="program__title">Волонтёрство</h3>
                           <p>Помогайте другим и развивайте свои лидерские качества.</p>
                           <a class="program__link" href="#">
                               <span class="visually-hidden">Подробнее</span>
                           </a>
                       </li>
-                      <li class="programs__item program program--study">
+                      <li class="programs__item program program--study swiper-slide">
                           <h3 class="program__title">Учёба</h3>
                           <p>Получите образование и измените своё будущее.</p>
                           <a class="program__link" href="#">
                               <span class="visually-hidden">Подробнее</span>
                           </a>
                       </li>
-                      <li class="programs__item program program--volunteering">
+                      <li class="programs__item program program--volunteering swiper-slide">
                           <h3 class="program__title">Волонтёрство</h3>
                           <p>Помогайте другим и развивайте свои лидерские качества.</p>
                           <a class="program__link" href="#">
                               <span class="visually-hidden">Подробнее</span>
                           </a>
                       </li>
-                      <li class="programs__item program program--study">
+                      <li class="programs__item program program--study swiper-slide">
                           <h3 class="program__title">Учёба</h3>
                           <p>Получите образование и измените своё будущее.</p>
                           <a class="program__link" href="#">
                               <span class="visually-hidden">Подробнее</span>
                           </a>
                       </li>
-                      <li class="programs__item program program--internship">
+                      <li class="programs__item program program--internship swiper-slide">
                           <h3 class="program__title">Стажировки</h3>
                           <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                           <a class="program__link" href="#">
@@ -183,6 +191,17 @@
                           </a>
                       </li>
                   </ul>
+              </div>
+              <div class="programs__control">
+                  <div class="programs__pagination"></div>
+                  <div class="programs__navigation navigation">
+                      <button class="programs__button programs__button--prev navigation__button navigation__button--prev" type="button">
+                        <span class="visually-hidden">Предыдущий слайд</span>
+                      </button>
+                      <button class="programs__button programs__button--next navigation__button navigation__button--next" type="button">
+                        <span class="visually-hidden">Следующий слайд</span>
+                      </button>
+                  </div>
               </div>
               <a class="programs__link" href="#">все программы</a>
           </div>

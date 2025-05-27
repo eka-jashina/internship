@@ -1,0 +1,38 @@
+.programs__container {
+  position: relative;
+}
+
+.programs__link {
+  @include link-reset;
+  @include button-style-light;
+  @include link-disable-style;
+
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+
+.programs__title {
+  margin-bottom: 40px;
+}
+
+.programs__swiper {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.programs__item {
+  //width: 392px;
+}
+
+.programs__pagination {
+  height: 4px;
+  width: 100%;
+  background-color: green;
+}
+
+.swiper-pagination-progressbar-fill {
+  height: 100%;
+  background-color: yellow;
+}
