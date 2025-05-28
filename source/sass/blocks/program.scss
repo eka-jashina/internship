@@ -1,0 +1,70 @@
+.program {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 17px 51px 17px 20px;
+  min-height: 420px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+}
+
+.program--internships {
+  background-image: url("../../img/decor/programs/programs-internships@1x.webp");
+}
+
+.program--volunteering {
+  background-image: url("../../img/decor/programs/programs-volunteering@1x.webp");
+}
+
+.program--study {
+  background-image: url("../../img/decor/programs/programs-study@1x.webp");
+}
+
+.program__title {
+  margin: 0;
+  padding: 18px 12px 6px 18px;
+  width: 60.5%;
+
+  font-size: 24px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #316DC2;
+  
+  background-color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.program__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 16px;
+  padding: 10px 18px;
+  min-height: 82px;
+  
+  background-color: #ffffff;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.program p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.program__link {
+  @include link-reset;
+  @include link-decor;
+  @include link-disable-style;
+  
+  min-width: 30px;
+  height: 30px;
+}

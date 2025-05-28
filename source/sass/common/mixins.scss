@@ -132,3 +132,58 @@
     }
   }
 }
+
+@mixin link-decor {
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    width: 30px;
+    height: 30px;
+
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    background-color: #316DC2;
+    border-radius: 50%;
+  }
+
+  &::after {
+    background-color: #ffffff;
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px 10px;
+    mask-image: url("/__spritemap#sprite-link-icon-view");
+  }
+
+  &:hover {
+    background-color: #ffffff;
+
+    &::before {
+      background-color: #ffffff;
+    }
+
+    &::after {
+      background-color: #316DC2;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+  }
+
+  &:focus-visible {
+    &::after {
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
