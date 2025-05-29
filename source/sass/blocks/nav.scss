@@ -39,6 +39,8 @@
   @include button-reset;
 
   position: relative;
+
+  padding-right: 22px;
   
   font-size: inherit;
   line-height: inherit;
@@ -62,8 +64,14 @@
     background-size: 12px 12px;
     background-image: url("/__spritemap#sprite-menu-arrow-view");
 
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(180deg);
     transition: transform 0.3s ease-in-out;
+  }
+}
+
+.nav__button.accordion--open {
+  &::before {
+    transform: translateY(-50%) rotate(0deg);
   }
 }
 
@@ -81,9 +89,5 @@
   &:focus-visible {
     opacity: 1;
     outline: 0;
-
-    &::before {
-      transform: translateY(-50%) rotate(180deg);
-    }
   }
 }

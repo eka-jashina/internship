@@ -21,7 +21,7 @@
                           <a class="nav__link" href="#">О проекте</a>
                       </li>
                       <li class="nav__category">
-                          <button class="nav__button" type="button">Программы</button>
+                          <button class="nav__button accordion-button" type="button">Программы</button>
                           <ul class="nav__sublist">
                               <li class="nav__subcategory">
                                   <a class="nav__link" href="#">Стажировки</a>
@@ -44,7 +44,7 @@
                           <a class="nav__link" href="#">отзывы</a>
                       </li>
                       <li class="nav__category">
-                          <button class="nav__button" type="button">Новости</button>
+                          <button class="nav__button accordion-button" type="button">Новости</button>
                           <ul class="nav__sublist">
                               <li class="nav__subcategory">
                                   <a class="nav__link" href="#">общее</a>
@@ -193,15 +193,6 @@
                                   </a>
                             </div>
                       </li>
-                      <li class="programs__item program program--internships swiper-slide">
-                          <h3 class="program__title">Стажировки</h3>
-                            <div class="program__content">
-                                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-                                  <a class="program__link" href="#">
-                                      <span class="visually-hidden">Подробнее</span>
-                                  </a>
-                            </div>
-                      </li>
                   </ul>
               </div>
               <div class="programs__control">
@@ -219,18 +210,41 @@
           </div>
       </section>
       <section class="grant section">
-          <div class="container">
+          <div class="grant__container container">
               <div class="grant__head">
-                  <h2 class="section__title">Как поехать</h2>
+                  <h2 class="grant__title section__title">Как поехать</h2>
                   <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+                  <div class="grant__img">
+                  <picture>
+                    <source width="498" height="363" type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/editable/grant/grant-desktop@1x.webp 1x, img/editable/grant/grant-desktop@2x.webp 2x">
+                    <source width="678" height="375" type="image/webp" media="(min-width: 768px)"
+                      srcset="img/editable/grant/grant-tablet@1x.webp 1x, img/editable/grant/grant-tablet@2x.webp 2x">
+                    <source width="290" height="200" type="image/webp"
+                      srcset="img/editable/grant/grant-mobile@1x.webp 1x, img/editable/grant/grant-mobile@2x.webp 2x">
+                    <source width="498" height="363" type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/editable/grant/grant-desktop@1x.jpg 1x, img/editable/grant/grant-desktop@2x.jpg 2x">
+                    <source width="678" height="375" type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/editable/grant/grant-tablet@1x.jpg 1x, img/editable/grant/grant-tablet@2x.jpg 2x">
+                    <img src="img/editable/grant/grant-mobile@1x.jpg" srcset="img/editable/grant/grant-mobile@2x.jpg" width="290" height="200" alt="Дорожный указатель с большим количеством стран.">
+                  </picture>                  
+                  </div>
               </div>
               <div class="grant__steps">
                   <p class="grant__accent-text">Чтобы получить грант на обучение, вам нужно:</p>
                   <ol class="grant__list">
-                      <li class="grant__item">Быть в возрасте от 16 до 30 лет</li>
-                      <li class="grant__item">Иметь оконченное среднее образование</li>
-                      <li class="grant__item">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</li>
-                      <li class="grant__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</li>
+                      <li class="grant__item">
+                          <p class="grant__text">Быть в возрасте от 16 до 30 лет</p>
+                      </li>
+                      <li class="grant__item">
+                          <p class="grant__text">Иметь оконченное среднее образование</p>
+                      </li>
+                      <li class="grant__item">
+                          <p class="grant__text">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</p>
+                      </li>
+                      <li class="grant__item">
+                          <p class="grant__text">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</p>
+                      </li>
                   </ol>
               </div>
           </div>
@@ -293,9 +307,10 @@
       </section>
       <section class="faq section">
           <div class="container">
+              <h2 class="faq__title section__title">Вопросы и ответы</h2>
               <ul class="faq__list">
                   <li class="faq__item">
-                      <button class="faq__question" type="button">
+                      <button class="faq__question accordion-button" type="button">
                           <span>Кто организатор? Какие сроки у программы?</span>
                       </button>
                       <div class="faq__answer">
@@ -303,7 +318,7 @@
                       </div>
                   </li>
                   <li class="faq__item">
-                      <button class="faq__question" type="button">
+                      <button class="faq__question accordion-button" type="button">
                           <span>Что такое грант на обучение?</span>
                       </button>
                       <div class="faq__answer">
@@ -311,7 +326,7 @@
                       </div>
                   </li>
                   <li class="faq__item">
-                      <button class="faq__question" type="button">
+                      <button class="faq__question accordion-button" type="button" data-open>
                           <span>Как определяется стоимость программы?</span>
                       </button>
                       <div class="faq__answer">
@@ -319,7 +334,7 @@
                       </div>
                   </li>
                   <li class="faq__item">
-                      <button class="faq__question" type="button">
+                      <button class="faq__question accordion-button" type="button">
                           <span>Признаётся ли учёба в рамках проекта для дальнейшего обучения?</span>
                       </button>
                       <div class="faq__answer">
@@ -327,7 +342,7 @@
                       </div>
                   </li>
                   <li class="faq__item">
-                      <button class="faq__question" type="button">
+                      <button class="faq__question accordion-button" type="button">
                           <span>Как выглядит полный процесс регистрации на программу «Стажировка»?</span>
                       </button>
                       <div class="faq__answer">
@@ -339,6 +354,7 @@
       </section>
       <section class="reviews section">
           <div class="container">
+              <h2 class="reviews__title section__title">Отзывы</h2>
               <div class="reviews__swiper">
                   <ul class="reviews__list">
                       <li class="reviews__item review">

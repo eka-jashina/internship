@@ -23,6 +23,16 @@ function initProgramsSwiper() {
       enabled: true,
       onlyInViewport: true,
     },
+
+    on: {
+      init() {
+        const fillEl = document.querySelector('.swiper-pagination-progressbar-fill');
+        if (fillEl) {
+          fillEl.classList.add('programs__pagination-fill');
+        }
+      },
+    },
+
   });
 
   return programsSwiper;

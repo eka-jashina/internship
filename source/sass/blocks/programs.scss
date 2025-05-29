@@ -36,21 +36,17 @@
 }
 
 .programs__pagination {
-  position: relative;
   height: 2px;
   width: 100%;
-  background-color: #316DC2;
-  opacity: 0.2;
+  background-color: rgba(49, 109, 194, 0.2);
 }
 
-.swiper-pagination-progressbar-fill {
-  position: relative;
-  z-index: 2;
-
-  display: inline-block;
-  height: 100%;
+.programs__pagination-fill {
+  display: block;
+  height: 2px;
   background-color: #316DC2;
-  opacity: 1;
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
 }
 
 .programs__navigation {
@@ -95,5 +91,5 @@
 }
 
 .programs__button--prev {
-  transform: rotate(-90deg);
+  transform: rotate(180deg);
 }

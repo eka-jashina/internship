@@ -1,0 +1,160 @@
+.faq__title {
+  margin-bottom: 60px;
+  padding: 11px 0;
+
+  text-align: center;
+}
+
+.faq__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 106px;
+}
+
+.faq__item {
+  padding: 42px;
+  border: 2px solid #316DC2;
+  border-radius: 16px;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.faq__item:has(.accordion--open) {
+  color: #F0EFE9;
+  background-color: #316DC2;
+}
+
+.faq__question {
+  @include button-reset;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+
+  font-size: 28px;
+  line-height: 34px;
+  color: #316DC2;
+  text-align: left;
+
+  transition: color 0.3s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    transition: background-color 0.3s ease-in-out, mask-image 0.3s ease-in-out, outline 0.3s ease-in-out;
+  }
+
+  &::before {
+    background-color: #316DC2;
+  }
+
+  &::after {
+    background-color: #ffffff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 18px;
+    mask-image: url("/__spritemap#sprite-plus-view");
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      outline: 1px solid #316DC2;
+      background-color: transparent;
+    }
+
+    &::after {
+      background-color: #316DC2;
+    }
+  }
+
+  &:active {
+    &::before {
+      outline: 0;
+      background-color: #275699;
+    }
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::before {
+      background-color: #A9AFB7;
+    }
+  }
+}
+
+.faq__question.accordion--open {
+  color: #ffffff;
+
+  &::before {
+    background-color: #ffffff;
+  }
+
+  &::after {
+    background-color: #316DC2;
+    mask-image: url("/__spritemap#sprite-minus-view");
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      outline: 1px solid #ffffff;
+      background-color: transparent;
+    }
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+
+  &:active {
+    &::before {
+      outline: 0;
+      background-color: #ffffff;
+    }
+
+    &::after {
+      background-color: #275699;
+    }
+  }
+}
+
+.faq__question span {
+  display: block;
+  width: calc(100% - 50px);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.3s ease-out;
+}
+
+.faq__answer p {
+  margin: 0;
+}
+
+.faq__answer p:first-child {
+  padding-top: 20px;
+}
