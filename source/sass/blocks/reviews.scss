@@ -2,3 +2,15 @@
   padding-top: 5px;
   margin-bottom: 40px;
 }
+
+.reviews__swiper {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reviews__list {
+  @include list-reset;
+
+  margin-bottom: 40px;
+}

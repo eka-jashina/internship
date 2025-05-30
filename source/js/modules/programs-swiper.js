@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination } from 'swiper/modules';
+import { addProgressbarClass } from './swiper-utils.js'
 
 function initProgramsSwiper() {
   const programsSwiper = new Swiper('.programs__swiper', {
@@ -25,14 +26,8 @@ function initProgramsSwiper() {
     },
 
     on: {
-      init() {
-        const fillEl = document.querySelector('.swiper-pagination-progressbar-fill');
-        if (fillEl) {
-          fillEl.classList.add('programs__pagination-fill');
-        }
-      },
+      init: addProgressbarClass,
     },
-
   });
 
   return programsSwiper;

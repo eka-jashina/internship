@@ -194,17 +194,17 @@
                             </div>
                       </li>
                   </ul>
-              </div>
-              <div class="programs__control">
-                  <div class="programs__pagination"></div>
-                  <div class="programs__navigation navigation">
-                      <button class="programs__button programs__button--prev navigation__button navigation__button--prev" type="button">
-                        <span class="visually-hidden">Предыдущий слайд</span>
-                      </button>
-                      <button class="programs__button programs__button--next navigation__button navigation__button--next" type="button">
-                        <span class="visually-hidden">Следующий слайд</span>
-                      </button>
-                  </div>
+                  <div class="programs__control swiper-control">
+                        <div class="programs__pagination swiper-control__pagination"></div>
+                        <div class="programs__navigation swiper-control__navigation">
+                            <button class="programs__button programs__button--prev swiper-control__button swiper-control__button--prev" type="button">
+                              <span class="visually-hidden">Предыдущий слайд</span>
+                            </button>
+                            <button class="programs__button programs__button--next swiper-control__button swiper-control__button--next" type="button">
+                              <span class="visually-hidden">Следующий слайд</span>
+                            </button>
+                        </div>
+                    </div>
               </div>
               <a class="programs__link" href="#">все программы</a>
           </div>
@@ -356,12 +356,15 @@
           <div class="container">
               <h2 class="reviews__title section__title">Отзывы</h2>
               <div class="reviews__swiper">
-                  <ul class="reviews__list">
-                      <li class="reviews__item review">
+                  <ul class="reviews__list swiper-wrapper">
+                      <li class="reviews__item review swiper-slide">
                           <div class="review__author">
                               <div class="review__profile">
-                                  <img class="review__photo" src="" alt="">
-                                  <span class="review__name">Лола Алекс</span>
+                                    <picture>
+                                      <source width="90" height="90" type="image/webp" srcset="img/content/reviews/reviews-alex@1x.webp 1x, img/content/reviews/reviews-alex@2x.webp 2x">
+                                      <img class="review__photo" src="img/content/reviews/reviews-alex@1x.jpg" srcset="img/content/reviews/reviews-alex@2x.jpg" width="90" height="90" alt="Лола Алекс">
+                                    </picture>        
+                                  <span class="review__name">Лола <br>Алекс</span>
                               </div>
                               <dl class="review__study">
                                   <div>
@@ -377,11 +380,14 @@
                           <p class="review__accent-text">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
                           <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
                       </li>
-                      <li class="reviews__item review">
+                      <li class="reviews__item review swiper-slide">
                           <div class="review__author">
                               <div class="review__profile">
-                                  <img class="review__photo" src="" alt="">
-                                  <span class="review__name">Давид Иванов</span>
+                                  <picture>
+                                    <source width="90" height="90" type="image/webp" srcset="img/content/reviews/reviews-ivanov@1x.webp 1x, img/content/reviews/reviews-ivanov@2x.webp 2x">
+                                    <img class="review__photo" src="img/content/reviews/reviews-ivanov@1x.jpg" srcset="img/content/reviews/reviews-ivanov@2x.jpg" width="90" height="90" alt="Лола Алекс">
+                                  </picture>  
+                                  <span class="review__name">Давид <br>Иванов</span>
                               </div>
                               <dl class="review__study">
                                   <div>
@@ -397,13 +403,70 @@
                           <p class="review__accent-text">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
                           <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
                       </li>
+                      <li class="reviews__item review swiper-slide">
+                            <div class="review__author">
+                                <div class="review__profile">
+                                    <picture>
+                                      <source width="90" height="90" type="image/webp" srcset="img/content/reviews/reviews-alex@1x.webp 1x, img/content/reviews/reviews-alex@2x.webp 2x">
+                                      <img class="review__photo" src="img/content/reviews/reviews-alex@1x.jpg" srcset="img/content/reviews/reviews-alex@2x.jpg" width="90" height="90" alt="Лола Алекс">
+                                    </picture>  
+                                    <span class="review__name">Лола <br>Алекс</span>
+                                </div>
+                                <dl class="review__study">
+                                    <div>
+                                        <dt class="review__program">программа</dt>
+                                        <dd>Masa Art Challenge</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="review__date">Дата</dt>
+                                        <dd>Осень 2022</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <p class="review__accent-text">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
+                            <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+                        </li>
+                      <li class="reviews__item review swiper-slide">
+                            <div class="review__author">
+                                <div class="review__profile">
+                                    <picture>
+                                      <source width="90" height="90" type="image/webp" srcset="img/content/reviews/reviews-ivanov@1x.webp 1x, img/content/reviews/reviews-ivanov@2x.webp 2x">
+                                      <img class="review__photo" src="img/content/reviews/reviews-ivanov@1x.jpg" srcset="img/content/reviews/reviews-ivanov@2x.jpg" width="90" height="90" alt="Лола Алекс">
+                                    </picture>  
+                                    <span class="review__name">Давид <br>Иванов</span>
+                                </div>
+                                <dl class="review__study">
+                                    <div>
+                                        <dt class="review__program">программа</dt>
+                                        <dd>Volunteer Chance</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="review__date">Дата</dt>
+                                        <dd>Лето 2022</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <p class="review__accent-text">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
+                            <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                        </li>
                   </ul>
+                  <div class="reviews__control swiper-control">
+                      <div class="reviews__pagination swiper-control__pagination"></div>
+                      <div class="reviews__navigation swiper-control__navigation">
+                          <button class="reviews__button reviews__button--prev swiper-control__button swiper-control__button--prev" type="button">
+                            <span class="visually-hidden">Предыдущий слайд</span>
+                          </button>
+                          <button class="reviews__button reviews__button--next swiper-control__button swiper-control__button--next" type="button">
+                            <span class="visually-hidden">Следующий слайд</span>
+                          </button>
+                      </div>
+                  </div>
               </div>
           </div>
       </section>
       <section class="contacts section">
           <div class="contacts__container container">
-              <h2 class="section__title">Контакты</h2>
+              <h2 class="contacts__title section__title">Контакты</h2>
               <dl class="contacts__list">
                   <div class="contacts__item">
                       <dt class="contacts__name">центральный офис</dt>
@@ -422,7 +485,13 @@
                       </dd>
                   </div>
               </dl>
-              <img class="contacts__map" src="" alt="">
+              <div class="contacts__map">
+                    <picture>
+                      <source width="1240" height="486" type="image/svg+xml" media="(min-width: 1440px)" srcset="img/content/map/map-desktop.svg">
+                      <source width="678" height="500" type="image/svg+xml" media="(min-width: 768px)" srcset="img/content/map/map-tablet.svg">
+                      <img class="contacts__img" src="img/content/map/map-mobile.svg" width="290" height="240" alt="Местоположение компании на карте.">
+                    </picture>
+              </div>
           </div>
       </section>
       <section class="callback section">
