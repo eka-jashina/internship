@@ -6,10 +6,12 @@
 
 .hero__swiper {
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 
   display: flex;
   flex-direction: column-reverse;
-  width: 986px;
+  width: 968px;
 
   overflow: hidden;
 }
@@ -34,8 +36,8 @@
 .hero__bullet {
   @include button-reset;
 
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 
   border: 2px solid #316DC2;
   border-radius: 50%;
@@ -79,13 +81,16 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
-  padding: 0 50px 35px;
-  width: 78.7%;
+  padding: 0 49px 35px 50px;
 
   background-color: #ffffff;
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  --nb-r: 30px;
+  --nb-w: 133px;
+  --nb-h: 53px;
 }
 
 .hero__slide p {
@@ -100,4 +105,6 @@
 
   align-self: center;
   min-width: 199px;
+  padding: 21px;
+  padding-left: 30px;
 }

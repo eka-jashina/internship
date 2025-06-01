@@ -30,8 +30,7 @@
 
   display: flex;
   align-items: center;
-  padding: 21px;
-  padding-right: 81px;
+  padding: 20px 81px 20px 30px;
 
   font-size: 14px;
   line-height: 14px;
@@ -59,13 +58,10 @@
   }
 
   &::before {
-    background-color: #316DC2;
     border-radius: 50%;
   }
 
   &::after {
-    background-color: #ffffff;
-    
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 10px 10px;
@@ -80,6 +76,58 @@
 
   background-color: #ffffff;
   border: 1px solid #316DC2;
+
+  &::before {
+    background-color: #316DC2;
+  }
+
+  &::after {
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: #316DC2;
+
+    &::before {
+      background-color: #ffffff;
+    }
+
+    &::after {
+      background-color: #316DC2;
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+    }
+  }
+
+  &:focus-visible {
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@mixin button-style-dark {
+  @include button-style;
+
+  color: #ffffff;
+
+  background-color: #316DC2;
+  border: 1px solid #ffffff;
+
+  &::before {
+    background-color: #ffffff;
+  }
+
+  &::after {
+    background-color: #316DC2;
+  }
 
   &:hover {
     color: #ffffff;
@@ -135,7 +183,7 @@
 
 @mixin link-decor {
   position: relative;
-  
+
   &::before,
   &::after {
     content: "";

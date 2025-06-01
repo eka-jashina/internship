@@ -8,11 +8,12 @@
   @include link-disable-style;
 
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 100px;
 }
 
 .programs__title {
+  padding: 5px 0;
   margin-bottom: 40px;
 }
 

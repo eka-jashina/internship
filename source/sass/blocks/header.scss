@@ -1,18 +1,52 @@
 .header {
+  position: relative;
+
   min-height: 800px;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(
+      rgba(49, 109, 194, 0.2),
+      rgba(49, 109, 194, 0.2)
+    );
+  }
 }
 
 .header:has(.hero__slide--1.swiper-slide-active) {
-  background-image: url("../../img/decor/hero/hero-slide-1-desktop@1x.jpg");
+  background-image: image-set(
+    url("../../img/decor/hero/hero-slide-1-desktop@1x.webp") type("image/webp")
+      1x,
+    url("../../img/decor/hero/hero-slide-1-desktop@2x.webp") type("image/webp")
+      2x,
+    url("../../img/decor/hero/hero-slide-1-desktop@1x.jpg") type("image/jpg") 1x,
+    url("../../img/decor/hero/hero-slide-1-desktop@2x.jpg") type("image/jpg") 2x
+  );
 }
 
 .header:has(.hero__slide--2.swiper-slide-active) {
-  background-image: url("../../img/decor/hero/hero-slide-2-desktop@1x.jpg");
+  background-image: image-set(
+    url("../../img/decor/hero/hero-slide-2-desktop@1x.webp") type("image/webp")
+      1x,
+    url("../../img/decor/hero/hero-slide-2-desktop@2x.webp") type("image/webp")
+      2x,
+    url("../../img/decor/hero/hero-slide-2-desktop@1x.jpg") type("image/jpg") 1x,
+    url("../../img/decor/hero/hero-slide-2-desktop@2x.jpg") type("image/jpg") 2x
+  );
 }
 
 .header:has(.hero__slide--3.swiper-slide-active) {
-  background-image: url("../../img/decor/hero/hero-slide-3-desktop@1x.jpg");
+  background-image: image-set(
+    url("../../img/decor/hero/hero-slide-3-desktop@1x.webp") type("image/webp")
+      1x,
+    url("../../img/decor/hero/hero-slide-3-desktop@2x.webp") type("image/webp")
+      2x,
+    url("../../img/decor/hero/hero-slide-3-desktop@1x.jpg") type("image/jpg") 1x,
+    url("../../img/decor/hero/hero-slide-3-desktop@2x.jpg") type("image/jpg") 2x
+  );
 }

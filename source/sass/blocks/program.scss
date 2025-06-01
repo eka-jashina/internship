@@ -1,5 +1,7 @@
 .program {
   box-sizing: border-box;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10,33 +12,71 @@
   background-position: center;
   background-size: cover;
   border-radius: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: linear-gradient(
+      rgba(49, 109, 194, 0.2),
+      rgba(49, 109, 194, 0.2)
+    );
+  }
 }
 
 .program--internships {
-  background-image: url("../../img/decor/programs/programs-internships@1x.webp");
+  background-image: image-set(
+    url("../../img/decor/programs/programs-internships@1x.webp")
+      type("image/webp") 1x,
+    url("../../img/decor/programs/programs-internships@2x.webp")
+      type("image/webp") 2x,
+    url("../../img/decor/programs/programs-internships@1x.jpg")
+      type("image/jpg") 1x,
+    url("../../img/decor/programs/programs-internships@2x.jpg")
+      type("image/jpg") 2x
+  );
 }
 
 .program--volunteering {
-  background-image: url("../../img/decor/programs/programs-volunteering@1x.webp");
+  background-image: image-set(
+    url("../../img/decor/programs/programs-volunteering@1x.webp")
+      type("image/webp") 1x,
+    url("../../img/decor/programs/programs-volunteering@2x.webp")
+      type("image/webp") 2x,
+    url("../../img/decor/programs/programs-volunteering@1x.jpg")
+      type("image/jpg") 1x,
+    url("../../img/decor/programs/programs-volunteering@2x.jpg")
+      type("image/jpg") 2x
+  );
 }
 
 .program--study {
-  background-image: url("../../img/decor/programs/programs-study@1x.webp");
+  background-image: image-set(
+    url("../../img/decor/programs/programs-study@1x.webp") type("image/webp") 1x,
+    url("../../img/decor/programs/programs-study@2x.webp") type("image/webp") 2x,
+    url("../../img/decor/programs/programs-study@1x.jpg") type("image/png") 1x,
+    url("../../img/decor/programs/programs-study@2x.jpg") type("image/png") 2x
+  );
 }
 
 .program__title {
   margin: 0;
   padding: 18px 12px 6px 18px;
-  width: 60.5%;
 
   font-size: 24px;
   line-height: 17px;
   font-weight: 400;
-  color: #316DC2;
-  
+  color: #316dc2;
+
   background-color: #ffffff;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+
+  --nb-r: 9px;
+  --nb-w: 109px;
+  --nb-h: 22px;
 }
 
 .program__content {
@@ -46,7 +86,7 @@
   column-gap: 16px;
   padding: 10px 18px;
   min-height: 82px;
-  
+
   background-color: #ffffff;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -64,7 +104,7 @@
   @include link-reset;
   @include link-decor;
   @include link-disable-style;
-  
+
   min-width: 30px;
   height: 30px;
 }

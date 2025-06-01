@@ -1,14 +1,14 @@
 .features {
   padding: 50px 100px;
   color: #F0EFE9;
-  
+
   background-color: #316DC2;
   border-radius: 20px;
 }
 
 .features__list {
   @include list-reset;
-  
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(184px, auto) minmax(164px, auto);
@@ -19,7 +19,7 @@
 .features__item {
   position: relative;
   z-index: 1;
-  
+
   padding-top: 22px;
   padding-left: 20px;
 
@@ -27,7 +27,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -2px;
     z-index: 2;
 
     width: 45px;
@@ -45,9 +45,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 5px 41px;
+  padding: 5px 40px;
   height: 100%;
-  
+
   border: 1px solid #F0EFE9;
   border-radius: 16px;
 }
