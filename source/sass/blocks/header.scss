@@ -27,6 +27,17 @@
     url("../../img/decor/hero/hero-slide-1-desktop@1x.jpg") type("image/jpg") 1x,
     url("../../img/decor/hero/hero-slide-1-desktop@2x.jpg") type("image/jpg") 2x
   );
+
+  @media (max-width: $tablet) {
+    background-image: image-set(
+      url("../../img/decor/hero/hero-slide-1-tablet@1x.webp") type("image/webp")
+        1x,
+      url("../../img/decor/hero/hero-slide-1-tablet@2x.webp") type("image/webp")
+        2x,
+      url("../../img/decor/hero/hero-slide-1-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../img/decor/hero/hero-slide-1-tablet@2x.jpg") type("image/jpg") 2x
+    );
+  }
 }
 
 .header:has(.hero__slide--2.swiper-slide-active) {
@@ -38,6 +49,17 @@
     url("../../img/decor/hero/hero-slide-2-desktop@1x.jpg") type("image/jpg") 1x,
     url("../../img/decor/hero/hero-slide-2-desktop@2x.jpg") type("image/jpg") 2x
   );
+
+  @media (max-width: $tablet) {
+    background-image: image-set(
+      url("../../img/decor/hero/hero-slide-2-tablet@1x.webp") type("image/webp")
+        1x,
+      url("../../img/decor/hero/hero-slide-2-tablet@2x.webp") type("image/webp")
+        2x,
+      url("../../img/decor/hero/hero-slide-2-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../img/decor/hero/hero-slide-2-tablet@2x.jpg") type("image/jpg") 2x
+    );
+  }
 }
 
 .header:has(.hero__slide--3.swiper-slide-active) {
@@ -49,4 +71,15 @@
     url("../../img/decor/hero/hero-slide-3-desktop@1x.jpg") type("image/jpg") 1x,
     url("../../img/decor/hero/hero-slide-3-desktop@2x.jpg") type("image/jpg") 2x
   );
+
+  @media (max-width: $tablet) {
+    background-image: image-set(
+      url("../../img/decor/hero/hero-slide-3-tablet@1x.webp") type("image/webp")
+        1x,
+      url("../../img/decor/hero/hero-slide-3-tablet@2x.webp") type("image/webp")
+        2x,
+      url("../../img/decor/hero/hero-slide-3-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../../img/decor/hero/hero-slide-3-tablet@2x.jpg") type("image/jpg") 2x
+    );
+  }
 }

@@ -4,6 +4,10 @@
 
   background-color: #316DC2;
   border-radius: 20px;
+
+  @media (max-width: $tablet) {
+    padding: 50px;
+  }
 }
 
 .features__list {
@@ -14,6 +18,11 @@
   grid-template-rows: minmax(184px, auto) minmax(164px, auto);
   grid-auto-rows: minmax(164px, auto);
   gap: 32px;
+
+  @media (max-width: $tablet) {
+    grid-template-rows: minmax(213px, auto) minmax(193px, auto);
+    grid-auto-rows: minmax(193px, auto);
+  }
 }
 
 .features__item {
@@ -39,6 +48,12 @@
     background-size: 18px 22px;
     background-image: url("/__spritemap#sprite-list-marker-view");
   }
+
+  @media (max-width: $tablet) {
+    &::before {
+      width: 42px;
+    }
+  }
 }
 
 .features__content {
@@ -50,6 +65,13 @@
 
   border: 1px solid #F0EFE9;
   border-radius: 16px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    align-content: start;
+    row-gap: 15px;
+    padding: 16px 21px;
+  }
 }
 
 .features__content dt {
@@ -58,10 +80,18 @@
   letter-spacing: 0.26px;
   text-transform: uppercase;
 
+  @media (max-width: $tablet) {
+    max-width: 205px;
+    
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
 }
 
 .features__content dd {
   margin: 0;
+  align-self: self-start;
 
   font-size: 16px;
   line-height: 20px;

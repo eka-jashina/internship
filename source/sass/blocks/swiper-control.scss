@@ -3,6 +3,10 @@
   grid-template-columns: auto 54px;
   align-items: center;
   column-gap: 50px;
+
+  @media (max-width: $tablet) {
+    padding-right: 45px;
+  }
 }
 
 .swiper-control__pagination {

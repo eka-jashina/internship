@@ -1,3 +1,9 @@
+.reviews__container {
+  @media (max-width: $tablet) {
+    padding-right: 0;
+  }
+}
+
 .reviews__title {
   padding-left: 3px;
   padding-top: 5px;

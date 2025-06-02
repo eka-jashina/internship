@@ -23,6 +23,11 @@
       rgba(49, 109, 194, 0.2),
       rgba(49, 109, 194, 0.2)
     );
+    border-radius: inherit;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 10px 20px;
   }
 }
 
@@ -77,6 +82,11 @@
   --nb-r: 9px;
   --nb-w: 109px;
   --nb-h: 22px;
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+    line-height: 14px;
+  }
 }
 
 .program__content {
@@ -91,6 +101,10 @@
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
+
+  @media (max-width: $tablet) {
+    padding: 12px 18px 15px;
+  }
 }
 
 .program p {
@@ -98,6 +112,10 @@
 
   font-size: 14px;
   line-height: 18px;
+
+  @media (max-width: $tablet) {
+    line-height: 20px;
+  }
 }
 
 .program__link {

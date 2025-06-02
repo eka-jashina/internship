@@ -109,7 +109,20 @@
   }
 
   &:active {
+    color: #ffffff;
+
+    background-color: #316DC2;
     opacity: 0.7;
+
+    &::before {
+      background-color: #ffffff;
+    }
+
+    &::after {
+      background-color: #316DC2;
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+    }
   }
 }
 
@@ -130,16 +143,16 @@
   }
 
   &:hover {
-    color: #ffffff;
+    color: #316DC2;
 
-    background-color: #316DC2;
+    background-color: #ffffff;
 
     &::before {
-      background-color: #ffffff;
+      background-color: #316DC2;
     }
 
     &::after {
-      background-color: #316DC2;
+      background-color: #ffffff;
       transform: translateY(-50%) rotate(45deg);
       transform-origin: center;
     }
@@ -153,7 +166,20 @@
   }
 
   &:active {
+    color: #316DC2;
+
+    background-color: #ffffff;
     opacity: 0.7;
+
+    &::before {
+      background-color: #316DC2;
+    }
+
+    &::after {
+      background-color: #ffffff;
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+    }
   }
 }
 

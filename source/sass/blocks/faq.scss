@@ -3,6 +3,11 @@
   padding: 11px 0;
 
   text-align: center;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+    padding: 0;
+  }
 }
 
 .faq__list {
@@ -12,6 +17,10 @@
   flex-direction: column;
   gap: 10px;
   padding: 0 106px;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .faq__item {
@@ -20,6 +29,10 @@
   border-radius: 16px;
 
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @media (max-width: $tablet) {
+    padding: 32px;
+  }
 }
 
 .faq__item:has(.accordion--open) {
@@ -100,6 +113,11 @@
     &::before {
       background-color: #A9AFB7;
     }
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 

@@ -5,6 +5,10 @@
 
   border: 2px solid #316DC2;
   border-radius: 16px;
+
+  @media (max-width: $tablet) {
+    padding: 52px
+  }
 }
 
 .review__author {
@@ -19,6 +23,10 @@
   align-items: center;
   gap: 15px;
   max-width: 260px;
+
+  @media (max-width: $tablet) {
+    max-width: 220px;
+  }
 }
 
 .review__photo {
@@ -33,6 +41,10 @@
   font-size: 18px;
   line-height: 24px;
   color: #316DC2;
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .review__study {
@@ -45,6 +57,10 @@
 
   font-size: 14px;
   line-height: 18px;
+
+  @media (max-width: $tablet) {
+    line-height: 20px;
+  }
 }
 
 .review__program,
@@ -69,4 +85,9 @@
   font-size: 24px;
   line-height: 26px;
   color: #316DC2;
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

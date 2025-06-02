@@ -2,6 +2,10 @@
   display: flex;
   align-items: flex-end;
   min-height: 684px;
+
+  @media (max-width: $tablet) {
+    min-height: 908px;
+  }
 }
 
 .hero__swiper {
@@ -14,6 +18,10 @@
   width: 968px;
 
   overflow: hidden;
+
+  @media (max-width: $tablet) {
+    width: 659px;
+  }
 }
 
 .hero__slide {
@@ -75,6 +83,13 @@
 
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (max-width: $tablet) {
+    padding: 30px 40px 24px;
+
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .hero__content {
@@ -91,11 +106,19 @@
   --nb-r: 30px;
   --nb-w: 133px;
   --nb-h: 53px;
+
+  @media (max-width: $tablet) {
+    padding: 0 40px 35px 40px;
+  }
 }
 
 .hero__slide p {
   margin: 0;
   max-width: 446px;
+
+  @media (max-width: $tablet) {
+    max-width: 241px;
+  }
 }
 
 .hero__link {

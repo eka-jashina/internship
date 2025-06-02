@@ -7,8 +7,6 @@ function initProgramsSwiper() {
     modules: [Navigation, Pagination],
     speed: 300,
     autoHeight: true,
-    slidesPerView: 3,
-    spaceBetween: 32,
 
     pagination: {
       el: '.programs__pagination',
@@ -18,6 +16,17 @@ function initProgramsSwiper() {
     navigation: {
       nextEl: '.programs__button--next',
       prevEl: '.programs__button--prev',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2.13,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
     },
 
     keyboard: {

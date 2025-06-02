@@ -7,8 +7,6 @@ function createReviewsSwiper() {
     modules: [Navigation, Pagination],
     speed: 300,
     autoHeight: true,
-    slidesPerView: 2,
-    spaceBetween: 32,
     pagination: {
       el: '.reviews__pagination',
       type: 'progressbar',
@@ -16,6 +14,16 @@ function createReviewsSwiper() {
     navigation: {
       nextEl: '.reviews__button--next',
       prevEl: '.reviews__button--prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.275,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
     },
     keyboard: {
       enabled: true,

@@ -5,6 +5,10 @@
 
   font-size: 14px;
   line-height: 18px;
+
+  @media (max-width: $tablet) {
+    line-height: 20px;
+  }
 }
 
 .form__field {
