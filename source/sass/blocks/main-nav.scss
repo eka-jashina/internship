@@ -1,10 +1,10 @@
-.nav {
+.main-nav {
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
 }
 
-.nav__list {
+.main-nav__list {
   @include list-reset;
 
   display: flex;
@@ -16,7 +16,7 @@
   text-transform: uppercase;
 }
 
-.nav__sublist {
+.main-nav__sublist {
   @include list-reset;
 
   display: flex;
@@ -31,11 +31,11 @@
   transition: max-height 0.3s ease-out;
 }
 
-.nav__subcategory:first-child {
+.main-nav__subcategory:first-child {
   margin-top: 20px;
 }
 
-.nav__button {
+.main-nav__button {
   @include button-reset;
 
   position: relative;
@@ -69,20 +69,20 @@
   }
 }
 
-.nav__button.accordion--open {
+.main-nav__button.accordion--open {
   &::before {
     transform: translateY(-50%) rotate(0deg);
   }
 }
 
-.nav__link {
+.main-nav__link {
   @include link-reset;
 
   opacity: 0.7;
 }
 
-.nav__button,
-.nav__link {
+.main-nav__button,
+.main-nav__link {
   transition: opacity 0.3s ease-in-out;
   
   &:hover,

@@ -1,0 +1,16 @@
+.footer-nav {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: $tablet) {
+    gap: 15px;
+  }
+}
+
+.footer-nav__link {
+  @include link-reset;
+  @include text-link-effects;
+}

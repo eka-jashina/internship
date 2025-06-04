@@ -1,0 +1,76 @@
+.footer {
+  padding: 60px 0 40px;
+
+  @media (max-width: $tablet) {
+    padding: 40px 0;
+  }
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 52px auto auto;
+  align-items: center;
+  gap: 25px 52px;
+}
+
+.footer__logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.footer__nav {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @media (max-width: $tablet) {
+    grid-column: 2 / 4;
+    justify-self: end;
+  }
+}
+
+.footer__socials {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  justify-self: end;
+
+  @media (max-width: $tablet) {
+    grid-row: 2 / 3;
+  }
+}
+
+.footer__juristic-info {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: $tablet) {
+    grid-column: 1 / 3;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.footer__copyright {
+  @media (max-width: $tablet) {
+    opacity: 0.6;
+  }
+}
+
+.footer__privacy {
+  @include link-reset;
+  @include text-link-effects;
+
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid currentColor;
+}
