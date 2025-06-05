@@ -37,10 +37,11 @@
     width: #{$size}px;
     height: #{$size}px;
 
-    background-repeat: no-resize;
-    background-position: center;
-    background-size: cover;
-    background-image: url("/__spritemap#sprite-angle-view");
+    background-color: inherit;
+    mask-repeat: no-resize;
+    mask-position: center;
+    mask-size: cover;
+    mask-image: url("/__spritemap#sprite-angle-view");
   }
 }
 
@@ -212,18 +213,6 @@
   }
 }
 
-@mixin link-disable-style {
-  &:not([href]) {
-    color: #A9AFB7;
-    border: 1px solid #A9AFB7;
-    pointer-events: none;
-
-    &::before {
-      background-color: #A9AFB7;
-    }
-  }
-}
-
 @mixin button-disable-style {
   &:disabled {
     color: #A9AFB7;
@@ -240,6 +229,10 @@
 
 @mixin link-decor {
   position: relative;
+
+  display: block;
+  width: 30px;
+  height: 30px;
 
   &::before,
   &::after {
@@ -295,6 +288,18 @@
   &:bot([href]) {
     pointer-events: none;
     
+    &::before {
+      background-color: #A9AFB7;
+    }
+  }
+}
+
+@mixin link-disable-style {
+  &:not([href]) {
+    color: #A9AFB7;
+    border: 1px solid #A9AFB7;
+    pointer-events: none;
+
     &::before {
       background-color: #A9AFB7;
     }

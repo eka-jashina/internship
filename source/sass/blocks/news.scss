@@ -6,9 +6,6 @@
 
 .news__list {
   @include list-reset;
-}
-
-.news__item {
+  
   box-sizing: border-box;
-  outline: 1px solid black;
 }

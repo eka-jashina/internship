@@ -72,8 +72,11 @@
 }
 
 .program__title {
+  @include decor-angle(18);
+  
   margin: 0;
   padding: 18px 12px 6px 18px;
+  width: 60.5%;
 
   font-size: 24px;
   line-height: 17px;
@@ -83,10 +86,6 @@
   background-color: #ffffff;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-
-  --nb-r: 9px;
-  --nb-w: 109px;
-  --nb-h: 22px;
 
   @media (max-width: $tablet) {
     font-size: 20px;
@@ -141,7 +140,4 @@
   @include link-reset;
   @include link-decor;
   @include link-disable-style;
-
-  min-width: 30px;
-  height: 30px;
 }
