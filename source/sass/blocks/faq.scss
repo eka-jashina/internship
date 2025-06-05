@@ -8,6 +8,10 @@
     margin-bottom: 40px;
     padding: 0;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 .faq__list {
@@ -32,6 +36,10 @@
 
   @media (max-width: $tablet) {
     padding: 32px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 22px 17px;
   }
 }
 
@@ -118,6 +126,11 @@
   @media (max-width: $tablet) {
     font-size: 22px;
     line-height: 26px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 

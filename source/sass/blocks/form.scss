@@ -10,6 +10,11 @@
   @media (max-width: $tablet) {
     line-height: 20px;
   }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .form__field {
@@ -89,6 +94,18 @@
   font-size: 12px;
   line-height: 12px;
   opacity: 0.9;
+
+  @media (max-width: $mobile) {
+    line-height: 14px;
+  }
+}
+
+.form__agreement-br {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: inline;
+  }
 }
 
 .form__submit {

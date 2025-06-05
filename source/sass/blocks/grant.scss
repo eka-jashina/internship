@@ -6,6 +6,10 @@
   @media (max-width: $tablet) {
     padding: 100px 0;
   }
+
+  @media (max-width: $mobile) {
+    padding: 70px 0;
+  }
 }
 
 .grant__container {
@@ -19,6 +23,11 @@
     gap: 40px;
     padding-right: 45px;
   }
+
+  @media (max-width: $mobile) {
+    gap: 30px;
+    padding-right: 15px;
+  }
 }
 
 .grant__title {
@@ -31,6 +40,10 @@
 
   @media (max-width: $tablet) {
     max-width: 498px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
   }
 }
 
@@ -57,6 +70,13 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @media (max-width: $mobile) {
+    max-width: 210px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .grant__list {
@@ -69,6 +89,11 @@
   @media (max-width: $tablet) {
     grid-template-columns: 1fr 1fr;
     gap: 10px 28px;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 10px
   }
 }
 
@@ -103,6 +128,21 @@
   @media (max-width: $tablet) {
     min-height: 117px;
   }
+
+  @media (max-width: $mobile) {
+    padding-top: 5px;
+    padding-left: 15px;
+    min-height: 70px;
+
+    &::before {
+      width: 32px;
+      height: 32px;
+
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+    }
+  }
 }
 
 .grant__text {
@@ -112,4 +152,8 @@
 
   border: 1px solid #F0EFE9;
   border-radius: 16px;
+
+  @media (max-width: $mobile) {
+    padding: 25px 26px;
+  }
 }

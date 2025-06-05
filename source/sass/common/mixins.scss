@@ -23,6 +23,29 @@
   cursor: pointer;
 }
 
+// DECOR
+
+@mixin decor-angle($size) {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -#{$size}px;
+
+    width: #{$size}px;
+    height: #{$size}px;
+
+    background-repeat: no-resize;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/__spritemap#sprite-angle-view");
+  }
+}
+
+// BUTTONS
+
 @mixin button-style {
   @include button-reset;
 
@@ -66,6 +89,12 @@
     mask-position: center;
     mask-size: 10px 10px;
     mask-image: url("/__spritemap#sprite-link-icon-view");
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
   }
 }
 
@@ -206,6 +235,8 @@
     }
   }
 }
+
+// LINKS
 
 @mixin link-decor {
   position: relative;

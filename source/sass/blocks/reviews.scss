@@ -1,6 +1,12 @@
 .reviews__container {
+  position: relative;
+  
   @media (max-width: $tablet) {
     padding-right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding-right: 15px;
   }
 }
 

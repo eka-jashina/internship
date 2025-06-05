@@ -4,6 +4,10 @@
   @media (max-width: $tablet) {
     padding-right: 0;
   }
+
+  @media (max-width: $mobile) {
+    padding-right: 15px;
+  }
 }
 
 .programs__link {
@@ -18,11 +22,21 @@
   @media (max-width: $tablet) {
     right: 45px;
   }
+
+  @media (max-width: $mobile) {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
 }
 
 .programs__title {
   padding: 5px 0;
   margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 .programs__swiper {
@@ -35,4 +49,8 @@
   @include list-reset;
 
   margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }

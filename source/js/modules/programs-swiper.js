@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination } from 'swiper/modules';
-import { addProgressbarClass } from './swiper-utils.js'
 
 function initProgramsSwiper() {
   const programsSwiper = new Swiper('.programs__swiper', {
@@ -19,6 +18,9 @@ function initProgramsSwiper() {
     },
 
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
       768: {
         slidesPerView: 2.13,
         spaceBetween: 30,
@@ -32,10 +34,6 @@ function initProgramsSwiper() {
     keyboard: {
       enabled: true,
       onlyInViewport: true,
-    },
-
-    on: {
-      init: addProgressbarClass,
     },
   });
 

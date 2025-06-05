@@ -6,6 +6,10 @@
   @media (max-width: $tablet) {
     padding: 100px 0;
   }
+
+  @media (max-width: $mobile) {
+    padding: 70px 0;
+  }
 }
 
 .contacts__container {
@@ -34,6 +38,11 @@
   @media (max-width: $tablet) {
     gap: 20.5px;
   }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .contacts__item {
@@ -55,6 +64,10 @@
   text-transform: uppercase;
 
   opacity: 0.8;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 .contacts__info {
@@ -73,6 +86,10 @@
 
   @media (max-width: $tablet) {
     line-height: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
   }
 }
 

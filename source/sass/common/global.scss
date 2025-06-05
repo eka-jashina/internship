@@ -48,6 +48,10 @@ img {
   @media (max-width: $tablet) {
     line-height: 20px;
   }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
 }
 
 .body--no-scroll {
@@ -84,6 +88,13 @@ img {
   @media (max-width: $tablet) {
     font-size: 34px;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .container {
@@ -94,5 +105,10 @@ img {
   @media (max-width: $tablet) {
     padding: 0 45px;
     width: 768px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 15px;
+    width: 320px;
   }
 }

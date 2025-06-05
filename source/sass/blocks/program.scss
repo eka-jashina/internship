@@ -29,6 +29,11 @@
   @media (max-width: $tablet) {
     padding: 10px 20px;
   }
+
+  @media (max-width: $mobile) {
+    padding: 18px 10px;
+    min-height: 400px;
+  }
 }
 
 .program--internships {
@@ -87,6 +92,11 @@
     font-size: 20px;
     line-height: 14px;
   }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .program__content {
@@ -105,6 +115,10 @@
   @media (max-width: $tablet) {
     padding: 12px 18px 15px;
   }
+
+  @media (max-width: $mobile) {
+    min-height: 69px;
+  }
 }
 
 .program p {
@@ -115,6 +129,11 @@
 
   @media (max-width: $tablet) {
     line-height: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 

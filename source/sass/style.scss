@@ -2,7 +2,11 @@
 @import "vendor/normalize";
 @import "vendor/nebo";
 @import 'swiper/css';
+@import 'swiper/css/grid';
 @import 'vendor/slimselect';
+
+// VENDOR OVERRIDE
+@import 'vendor-override/swiper';
 
 // COMMON
 @import "common/fonts";
@@ -21,6 +25,7 @@
 @import "blocks/program";
 @import "blocks/swiper-control";
 @import "blocks/grant";
+@import "blocks/news";
 @import "blocks/faq";
 @import "blocks/reviews";
 @import "blocks/review";

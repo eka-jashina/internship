@@ -77,7 +77,7 @@
           <div class="hero__wrapper swiper-wrapper">
             <div class="hero__slide hero__slide--1 swiper-slide">
               <h2 class="hero__title section__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-              <div class="hero__content nebo nebo--br">
+              <div class="hero__content">
                 <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий
                   студенческий стиль жизни!</p>
                 <a class="hero__link" href="#">подробнее</a>
@@ -85,7 +85,7 @@
             </div>
             <div class="hero__slide hero__slide--2 swiper-slide">
               <h2 class="hero__title section__title">Волонтёрские программы – внесите свой вклад в общество</h2>
-              <div class="hero__content nebo nebo--br">
+              <div class="hero__content">
                 <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
                 </p>
                 <a class="hero__link" href="#">подробнее</a>
@@ -93,7 +93,7 @@
             </div>
             <div class="hero__slide hero__slide--3 swiper-slide">
               <h2 class="hero__title section__title">Программы стажировок в крупнейших компаниях мира</h2>
-              <div class="hero__content nebo nebo--br">
+              <div class="hero__content">
                 <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
                 <a class="hero__link" href="#">подробнее</a>
               </div>
@@ -199,20 +199,20 @@
               </div>
             </li>
           </ul>
-          <div class="programs__control swiper-control">
-            <div class="programs__pagination swiper-control__pagination"></div>
-            <div class="programs__navigation swiper-control__navigation">
-              <button
-                class="programs__button programs__button--prev swiper-control__button swiper-control__button--prev"
-                type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-              <button
-                class="programs__button programs__button--next swiper-control__button swiper-control__button--next"
-                type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
-            </div>
+        </div>
+        <div class="programs__control swiper-control">
+          <div class="programs__pagination swiper-control__pagination"></div>
+          <div class="programs__navigation swiper-control__navigation">
+            <button
+              class="programs__button programs__button--prev swiper-control__button swiper-control__button--prev"
+              type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button
+              class="programs__button programs__button--next swiper-control__button swiper-control__button--next"
+              type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
           </div>
         </div>
         <a class="programs__link" href="#">все программы</a>
@@ -281,40 +281,57 @@
             <button class="news__button">путешествия</button>
           </li>
         </ul>
-        <ul class="news__list">
-          <li class="news__item news-item">
-            <span class="news-item__date">23/03/2023</span>
-            <h3 class="news-item__title">Интервью с участницей программы стажировки</h3>
-            <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-            <button class="news-item__button">
-              <span class="visually-hidden">Подробнее</span>
+        <div class="news__swiper">
+          <ul class="news__list swiper-wrapper">
+            <li class="news__item news-item swiper-slide">
+              <span class="news-item__date">23/03/2023</span>
+              <h3 class="news-item__title">Интервью с участницей программы стажировки</h3>
+              <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+              <button class="news-item__button">
+                <span class="visually-hidden">Подробнее</span>
+              </button>
+            </li>
+            <li class="news__item news-item swiper-slide">
+              <span class="news-item__date">20/03/2023</span>
+              <h3 class="news-item__title">Путешествуем по миру</h3>
+              <p>Какие места посещают наши студенты весной</p>
+              <button class="news-item__button">
+                <span class="visually-hidden">Подробнее</span>
+              </button>
+            </li>
+            <li class="news__item news-item swiper-slide">
+              <span class="news-item__date">17/03/2023</span>
+              <h3 class="news-item__title">Новая программа волонтёрства</h3>
+              <p>Программа помощи детям длительностью 4 месяца</p>
+              <button class="news-item__button">
+                <span class="visually-hidden">Подробнее</span>
+              </button>
+            </li>
+            <li class="news__item news-item swiper-slide">
+              <span class="news-item__date">10/03/2023</span>
+              <h3 class="news-item__title">Построй свою карьеру</h3>
+              <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+              <button class="news-item__button">
+                <span class="visually-hidden">Подробнее</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="news__control swiper-control">
+          <div class="news__pagination swiper-control__pagination"></div>
+          <div class="news__navigation swiper-control__navigation">
+            <button
+              class="news__button news__button--prev swiper-control__button swiper-control__button--prev"
+              type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
             </button>
-          </li>
-          <li class="news__item news-item">
-            <span class="news-item__date">20/03/2023</span>
-            <h3 class="news-item__title">Путешествуем по миру</h3>
-            <p>Какие места посещают наши студенты весной</p>
-            <button class="news-item__button">
-              <span class="visually-hidden">Подробнее</span>
+            <button
+              class="news__button news__button--next swiper-control__button swiper-control__button--next"
+              type="button">
+              <span class="visually-hidden">Следующий слайд</span>
             </button>
-          </li>
-          <li class="news__item news-item">
-            <span class="news-item__date">17/03/2023</span>
-            <h3 class="news-item__title">Новая программа волонтёрства</h3>
-            <p>Программа помощи детям длительностью 4 месяца</p>
-            <button class="news-item__button">
-              <span class="visually-hidden">Подробнее</span>
-            </button>
-          </li>
-          <li class="news__item news-item">
-            <span class="news-item__date">10/03/2023</span>
-            <h3 class="news-item__title">Построй свою карьеру</h3>
-            <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-            <button class="news-item__button">
-              <span class="visually-hidden">Подробнее</span>
-            </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section class="faq section">
@@ -491,18 +508,18 @@
                 уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
             </li>
           </ul>
-          <div class="reviews__control swiper-control">
-            <div class="reviews__pagination swiper-control__pagination"></div>
-            <div class="reviews__navigation swiper-control__navigation">
-              <button class="reviews__button reviews__button--prev swiper-control__button swiper-control__button--prev"
-                type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-              <button class="reviews__button reviews__button--next swiper-control__button swiper-control__button--next"
-                type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
-            </div>
+        </div>
+        <div class="reviews__control swiper-control">
+          <div class="reviews__pagination swiper-control__pagination"></div>
+          <div class="reviews__navigation swiper-control__navigation">
+            <button class="reviews__button reviews__button--prev swiper-control__button swiper-control__button--prev"
+              type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="reviews__button reviews__button--next swiper-control__button swiper-control__button--next"
+              type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
           </div>
         </div>
       </div>
@@ -571,7 +588,7 @@
               </div>
               <div class="form__agreement">
                 <label class="form__agreement-text" for="agreement">Я согласен на обработку моих персональных
-                  данных</label>
+                  <br class="form__agreement-br">данных</label>
                 <input class="form__agreement-check" type="checkbox" name="agreement" id="agreement">
               </div>
               <button class="form__submit" type="submit">отправить</button>

@@ -1,10 +1,3 @@
-function addProgressbarClass(swiper) {
-  const fillEl = swiper.el.querySelector('.swiper-pagination-progressbar-fill');
-  if (fillEl) {
-    fillEl.classList.add('swiper-control__pagination-fill');
-  }
-}
-
 function setMaxSlideHeight(swiper) {
   if (!swiper || !swiper.slides || !swiper.slides.length) return;
 
@@ -21,4 +14,4 @@ function setMaxSlideHeight(swiper) {
   });
 }
 
-export { addProgressbarClass, setMaxSlideHeight }
+export { setMaxSlideHeight }

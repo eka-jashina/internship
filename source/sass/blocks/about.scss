@@ -1,5 +1,9 @@
 .about {
   padding-top: 70px;
+
+  @media (max-width: $tablet) {
+    padding-top: 50px;
+  }
 }
 
 .about__container {
@@ -23,6 +27,11 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .about__goal h3 {
@@ -40,6 +49,13 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .about__goal p {
@@ -54,6 +70,12 @@
     margin-bottom: 40px;
     
     line-height: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+
+    font-size: 14px;
   }
 }
 

@@ -11,11 +11,20 @@
   grid-template-columns: 52px auto auto;
   align-items: center;
   gap: 25px 52px;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .footer__logo {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
+  @media (max-width: $mobile) {
+    justify-self: center;
+  }
 }
 
 .footer__nav {
@@ -26,6 +35,12 @@
     grid-column: 2 / 4;
     justify-self: end;
   }
+
+  @media (max-width: $mobile) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
 }
 
 .footer__socials {
@@ -35,6 +50,12 @@
 
   @media (max-width: $tablet) {
     grid-row: 2 / 3;
+  }
+
+  @media (max-width: $mobile) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    justify-self: center;
   }
 }
 
@@ -57,6 +78,14 @@
 
     font-size: 12px;
     line-height: 12px;
+  }
+
+  @media (max-width: $mobile) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-items: center;
+
+    line-height: 14px;
   }
 }
 

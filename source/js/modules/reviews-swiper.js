@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination } from 'swiper/modules';
-import { addProgressbarClass, setMaxSlideHeight } from './swiper-utils.js'
+import { setMaxSlideHeight } from './swiper-utils.js'
 
 function createReviewsSwiper() {
   return new Swiper('.reviews__swiper', {
@@ -16,6 +16,9 @@ function createReviewsSwiper() {
       prevEl: '.reviews__button--prev',
     },
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
       768: {
         slidesPerView: 1.275,
         spaceBetween: 30,
@@ -35,7 +38,6 @@ function createReviewsSwiper() {
 function initReviewsSwiper() {
   const reviewsSwiper = createReviewsSwiper();
 
-  addProgressbarClass(reviewsSwiper);
   setMaxSlideHeight(reviewsSwiper);
 
   reviewsSwiper.on('resize', setMaxSlideHeight);

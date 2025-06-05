@@ -1,3 +1,23 @@
+.callback {
+  @media (max-width: $mobile) {
+    padding: 0;
+    margin: 40px 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-image: image-set(
+      url("../../img/decor/callback/callback-background-tablet@1x.webp")
+        type("image/webp") 1x,
+      url("../../img/decor/callback/callback-background-tablet@2x.webp")
+        type("image/webp") 2x,
+      url("../../img/decor/callback/callback-background-tablet@1x.jpg")
+        type("image/jpg") 1x,
+      url("../../img/decor/callback/callback-background-tablet@2x.jpg")
+        type("image/jpg") 2x
+    );
+  }
+}
+
 .callback__container {
   border-radius: 16px;
   background-repeat: no-repeat;
@@ -28,6 +48,13 @@
         type("image/jpg") 2x
     );
   }
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    
+    background-image: none;
+    border-radius: 0;
+  }
 }
 
 .callback__content {
@@ -43,6 +70,12 @@
     width: 67.8%;
     padding: 30px 40px 36px;
   }
+
+  @media (max-width: $mobile) {
+    margin: 43px 0 40px;
+    padding: 15px 15px 27px;
+    width: auto;
+  }
 }
 
 .callback__title {
@@ -52,12 +85,25 @@
   color: #ffffff;
 
   @media (max-width: $tablet) {
+    margin-bottom: 31px;
+    
     font-size: 28px;
     line-height: 28px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 10px;
+    
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
 .callback__text {
   margin: 0;
   margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
 }
