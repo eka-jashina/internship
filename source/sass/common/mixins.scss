@@ -229,10 +229,13 @@
 
 @mixin link-decor {
   position: relative;
+  flex-shrink: 0;
 
   display: block;
   width: 30px;
   height: 30px;
+
+  border-radius: 50%;
 
   &::before,
   &::after {
