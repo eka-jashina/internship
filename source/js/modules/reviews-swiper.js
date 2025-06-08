@@ -20,7 +20,7 @@ function createReviewsSwiper() {
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 1.275,
+        slidesPerView: 1.276,
         spaceBetween: 30,
       },
       1440: {

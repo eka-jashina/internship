@@ -27,7 +27,7 @@
 
 @mixin decor-angle($size) {
   position: relative;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -93,9 +93,17 @@
   }
 
   @media (max-width: $mobile) {
+    padding: 15px 59px 15px 20px;
+    
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
+
+      &::before,
+      &::after {
+        width: 34px;
+        height: 34px;
+      }
   }
 }
 
@@ -104,7 +112,7 @@
 
   color: #316DC2;
 
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #316DC2;
 
   &::before {
@@ -290,7 +298,7 @@
 
   &:bot([href]) {
     pointer-events: none;
-    
+
     &::before {
       background-color: #A9AFB7;
     }
@@ -311,7 +319,7 @@
 
 @mixin text-link-effects {
   transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  
+
   &:hover,
   &:focus-visible {
     outline: 0;

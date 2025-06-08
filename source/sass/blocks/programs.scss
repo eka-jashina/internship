@@ -1,3 +1,14 @@
+.programs {
+  @media (max-width: $tablet) {
+    padding-top: 48px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 51px;
+    padding-bottom: 52px;
+  }
+}
+
 .programs__container {
   position: relative;
 
@@ -25,8 +36,10 @@
 
   @media (max-width: $mobile) {
     position: relative;
-    top: auto;
     right: auto;
+
+    width: 205px;
+    padding-left: 30px;
   }
 }
 
@@ -34,8 +47,12 @@
   padding: 5px 0;
   margin-bottom: 40px;
 
+  @media (max-width: $tablet) {
+    margin-bottom: 38px;
+  }
+
   @media (max-width: $mobile) {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 }
 
@@ -51,6 +68,6 @@
   margin-bottom: 40px;
 
   @media (max-width: $mobile) {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 }

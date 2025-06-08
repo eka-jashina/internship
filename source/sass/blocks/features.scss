@@ -33,6 +33,8 @@
     grid-template-rows: minmax(149px, auto);
     grid-auto-rows: minmax(149px, auto);
     gap: 0;
+
+    overflow: hidden;
   }
 }
 
@@ -59,12 +61,6 @@
     background-size: 18px 22px;
     background-image: url("/__spritemap#sprite-list-marker-view");
   }
-
-  @media (max-width: $tablet) {
-    &::before {
-      width: 42px;
-    }
-  }
 }
 
 .features__content {
@@ -80,8 +76,8 @@
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     align-content: start;
-    row-gap: 15px;
-    padding: 16px 21px;
+    row-gap: 14px;
+    padding: 16px 20px 15px;
   }
 }
 
@@ -93,7 +89,7 @@
 
   @media (max-width: $tablet) {
     max-width: 205px;
-    
+
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -103,6 +99,12 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.16px;
+  }
+}
+
+.features__item--4 dt {
+  @media (max-width: $mobile) {
+    max-width: 164px;
   }
 }
 

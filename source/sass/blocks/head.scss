@@ -40,11 +40,28 @@
 
   padding-right: 70px;
 
+  background-color: #ffffff;
+
   &::after {
     mask-size: 18px 8px;
     mask-image: url("/__spritemap#sprite-menu-open-view");
 
     transition: mask-image 0.3s ease-in-out;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 20px;
+  }
+
+    @media (max-width: $mobile) {
+      padding-left: 27px;
+      min-height: 54px;
+
+      &::before,
+      &::after {
+        width: 46px;
+        height: 46px;
+      }
   }
 }
 

@@ -4,6 +4,10 @@
   @media (max-width: $tablet) {
     padding-top: 50px;
   }
+
+  @media (max-width: $mobile) {
+    padding-top: 51px;
+  }
 }
 
 .about__container {
@@ -15,6 +19,22 @@
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     row-gap: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    row-gap: 20px;
+  }
+}
+
+.about__title {
+  @media (max-width: $mobile) {
+    margin-bottom: 14px;
+  }
+}
+
+.about__head {
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
   }
 }
 
@@ -34,18 +54,24 @@
   }
 }
 
+.about__goal {
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
 .about__goal h3 {
   margin: 0;
   margin-bottom: 40px;
 
   font-size: 32px;
   line-height: 36px;
-  color: #316DC2;
-  letter-spacing: -0.3px;
+  font-weight: 400;
+  color: #316dc2;
 
   @media (max-width: $tablet) {
     margin-bottom: 30px;
-    
+
     font-size: 28px;
     line-height: 28px;
   }
@@ -64,11 +90,11 @@
 
   font-size: 16px;
   line-height: 26px;
-  text-wrap: pretty;
 
   @media (max-width: $tablet) {
     margin-bottom: 40px;
-    
+    max-width: 536px;
+
     line-height: 20px;
   }
 
@@ -82,6 +108,9 @@
 .about__button {
   @include button-style-light;
   @include button-disable-style;
+
+  @media (max-width: $mobile) {
+  }
 }
 
 .about__features {

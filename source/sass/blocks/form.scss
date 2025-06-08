@@ -25,6 +25,10 @@
 
 .form__field--select {
   margin-top: -2px;
+
+  @media (max-width: $tablet) {
+    margin-top: 0;
+  }
 }
 
 .form__label {
@@ -51,6 +55,14 @@
 
 .form__textarea {
   min-height: 90px;
+
+  @media (max-width: $tablet) {
+    min-height: 88px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 94px;
+  }
 }
 
 .form__select {
@@ -60,6 +72,14 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
+
+  @media (max-width: $tablet) {
+    min-height: 52px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 260px;
+  }
 }
 
 .form__option {
@@ -80,6 +100,10 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 0;
+  }
 }
 
 .form__agreement-check {
@@ -112,4 +136,12 @@
   @include button-style-dark;
 
   justify-content: center;
+
+  @media (max-width: $tablet) {
+    max-width: 353px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 260px;
+  }
 }

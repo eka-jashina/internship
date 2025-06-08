@@ -10,7 +10,8 @@
   }
 
   @media (max-width: $mobile) {
-    margin-bottom: 30px;
+    padding-top: 1px;
+    margin-bottom: 29px;
   }
 }
 
@@ -35,11 +36,14 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   @media (max-width: $tablet) {
-    padding: 32px;
+    padding: 30px;
   }
 
   @media (max-width: $mobile) {
-    padding: 22px 17px;
+    padding: 20px 15px;
+
+    border-radius: 14px;
+
   }
 }
 
@@ -173,6 +177,10 @@
 .faq__question span {
   display: block;
   width: calc(100% - 50px);
+
+  @media (max-width: $mobile) {
+      width: calc(100% - 40px);
+  }
 }
 
 .faq__answer {

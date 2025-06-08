@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile) {
-    padding: 70px 0;
+    padding: 71px 0 70px;
   }
 }
 
@@ -32,6 +32,10 @@
 
 .grant__title {
   color: #ffffff;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 14px;
+  }
 }
 
 .grant__head p {
@@ -67,12 +71,17 @@
   color: #ffffff;
 
   @media (max-width: $tablet) {
+    margin-bottom: 24px;
+    padding: 6px 0;
+
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (max-width: $mobile) {
     max-width: 210px;
+    margin-bottom: 21px;
+    padding: 5px 0;
 
     font-size: 18px;
     line-height: 22px;
@@ -93,7 +102,7 @@
 
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
-    gap: 10px
+    gap: 11px
   }
 }
 
@@ -130,7 +139,7 @@
   }
 
   @media (max-width: $mobile) {
-    padding-top: 5px;
+    padding-top: 4px;
     padding-left: 15px;
     min-height: 70px;
 
@@ -152,8 +161,10 @@
 
   border: 1px solid #F0EFE9;
   border-radius: 16px;
+  opacity: 0.8;
 
   @media (max-width: $mobile) {
-    padding: 25px 26px;
+    padding: 24px;
+    padding-left: 26px;
   }
 }
