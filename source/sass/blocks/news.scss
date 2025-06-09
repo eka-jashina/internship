@@ -3,8 +3,12 @@
   box-sizing: border-box;
   overflow: hidden;
 
+  @media (max-width: $tablet) {
+    height: 730px;
+  }
+
   @media (max-width: $mobile) {
-    height: 690px;
+    height: 590px;
   }
 }
 
@@ -15,11 +19,7 @@
   margin-bottom: 40px;
 
   @media (max-width: $tablet) {
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: $mobile) {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 }
 
@@ -29,8 +29,20 @@
   display: block;
   min-height: 32px;
 
+  @media (max-width: $tablet) {
+    margin-top: 30px;
+  }
+
   @media (max-width: $mobile) {
+    margin-top: 24px;
     min-height: 26px;
+  }
+}
+
+.news__navigation {
+  @media (max-width: $mobile) {
+    left: 15px;
+    width: 100%;
   }
 }
 

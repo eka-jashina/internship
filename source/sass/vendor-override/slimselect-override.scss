@@ -1,0 +1,61 @@
+:root {
+  --ss-primary-color: #316dc2;
+  --ss-font-color: #484848;
+
+}
+
+.ss-main .ss-arrow {
+  display: none;
+}
+
+.ss-main {
+  &::before {
+    content: "";
+    position: absolute;
+    right: 21px;
+    top: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/__spritemap#sprite-menu-arrow-view");
+
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.ss-main.ss-open-below {
+  &::before {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+.ss-main:focus {
+  box-shadow: none;
+  
+}
+
+.ss-list {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+}
+
+.ss-open-below .ss-option:first-child,
+.ss-open-above .ss-option:first-child {
+  display: none;
+}
+
+.ss-content .ss-list .ss-option {
+  padding: 17px 20px;
+}
+
+.ss-main .ss-values {
+  color: #ffffff;
+}

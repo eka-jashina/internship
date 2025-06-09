@@ -38,7 +38,7 @@ function initNewsSwiper() {
         spaceBetween: 30,
         grid: {
           rows: 2,
-          fill: 'row',
+          fill: 'column',
         },
       },
       1440: {
@@ -55,7 +55,7 @@ function initNewsSwiper() {
 
     on: {
       init: function () {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 1440) {
           // Убрать встроенные высоты слайдов
           this.el.querySelectorAll('.swiper-slide').forEach(slide => {
             slide.style.height = '';
