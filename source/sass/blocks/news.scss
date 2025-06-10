@@ -1,3 +1,79 @@
+.news__topic-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+
+  }
+}
+
+.news__topic-list::-webkit-scrollbar {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.news__button {
+  @include button-reset;
+
+  padding: 16px 35px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #316DC2;
+
+  opacity: 0.6;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  transition: border 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    background-color: #ffffff;
+    outline: none;
+    opacity: 1;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 16px 22px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 12px 16px;
+
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.news__button--active {
+  opacity: 1;
+  border: 2px solid #316DC2;
+}
+
 .news__swiper {
   position: relative;
   box-sizing: border-box;
@@ -14,7 +90,7 @@
 
 .news__list {
   @include list-reset;
-  
+
   box-sizing: border-box;
   margin-bottom: 40px;
 
@@ -25,12 +101,13 @@
 
 .news__control {
   position: relative;
-  
+
   display: block;
   min-height: 32px;
 
   @media (max-width: $tablet) {
     margin-top: 30px;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile) {
@@ -61,14 +138,14 @@
 
 .news__bullet {
   @include button-reset;
-  
+
   width: 32px;
   height: 32px;
 
   font-size: 16px;
   line-height: 16px;
-  color: #316DC2;
-  
+  color: #316dc2;
+
   border-radius: 50%;
   opacity: 0.5;
 
@@ -80,6 +157,6 @@
 
 .news__bullet--active {
   color: #ffffff;
-  background-color: #316DC2;
+  background-color: #316dc2;
   opacity: 1;
 }
