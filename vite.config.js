@@ -65,7 +65,7 @@ export default {
   build: {
     outDir: '../dist',
   },
-  base: './',
+  base: '/internship/',
   server: {
     port: 3000,
   }
