@@ -1,12 +1,12 @@
 // VENDOR
 @import "vendor/normalize";
-@import 'swiper/css';
-@import 'swiper/css/grid';
-@import 'vendor/slimselect';
+@import "swiper/css";
+@import "swiper/css/grid";
+@import "vendor/choices";
 
 // VENDOR OVERRIDE
-@import 'vendor-override/swiper';
-@import 'vendor-override/slimselect-override';
+@import "vendor-override/swiper-override";
+@import "vendor-override/choices-override";
 
 // COMMON
 @import "common/fonts";
@@ -36,5 +36,4 @@
 @import "blocks/footer";
 @import "blocks/footer-nav";
 @import "blocks/socials";
-
-
+@import "blocks/callback-modal";

@@ -61,11 +61,11 @@
   }
 
   &:focus-visible {
-    background-color: #ffffff;
+    background-color: $button-light-color;
   }
 
   &:active {
-    background-color: #ffffff;
+    background-color: $button-light-color;
     opacity: 0.7;
   }
 

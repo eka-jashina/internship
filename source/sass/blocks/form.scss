@@ -5,13 +5,16 @@
 
   font-size: 14px;
   line-height: 18px;
-  color: #F0EFE9;
+
+  overflow: visible;
 
   @media (max-width: $tablet) {
     line-height: 20px;
   }
 
   @media (max-width: $mobile) {
+    gap: 21px;
+
     font-size: 12px;
     line-height: 14px;
   }
@@ -19,12 +22,18 @@
 
 .form__field {
   display: flex;
+  overflow: visible;
   flex-direction: column;
   gap: 12px;
+
+  @media (max-width: $mobile) {
+    gap: 11px;
+  }
 }
 
 .form__field--select {
   margin-top: -2px;
+  gap: 11px;
 
   @media (max-width: $tablet) {
     margin-top: 0;
@@ -46,8 +55,14 @@
   min-height: 50px;
   padding: 10px;
 
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba($background-white-color, 0.3);
   border-radius: 8px;
 
   transition: border 0.3s ease-in-out;
@@ -55,17 +70,25 @@
   &:hover,
   &:focus-visible {
     outline: 0;
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid rgba($background-white-color, 1);
   }
 
   &:disabled {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba($background-white-color, 0.2);
     pointer-events: none;
   }
 }
 
+.form--modal .form__input {
+  border: 1px solid rgba($text-dark-color, 0.3);
+}
+
 .form__field:hover .form__input {
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba($background-white-color, 1);
+}
+
+.form--modal .form__field:hover .form__input {
+  border: 1px solid rgba($text-dark-color, 1);
 }
 
 .form__field:focus-within .form__label {
@@ -73,15 +96,16 @@
 }
 
 .form__textarea {
-  min-height: 90px;
+  min-height: 88px;
 
   &:hover,
   &:focus-visible {
-    border: 1px solid rgba(255, 255, 255, 1);
+    outline: 0;
+    border: 1px solid rgba($background-white-color, 1);
   }
 
   &:disabled {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba($background-white-color, 0.2);
     pointer-events: none;
   }
 
@@ -94,21 +118,34 @@
   }
 }
 
+.form--modal .form__textarea {
+  &:hover,
+  &:focus-visible {
+    outline: 0;
+    border: 1px solid rgba($text-dark-color, 1);
+  }
+
+  &:disabled {
+    background-color: rgba($text-dark-color, 0.2);
+    pointer-events: none;
+  }
+}
+
 .form__select {
   appearance: none;
   min-height: 50px;
 
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba($background-white-color, 0.3);
   border-radius: 8px;
 
   &:hover,
   &:focus-visible {
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid rgba($background-white-color, 1);
   }
 
   &:disabled {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba($background-white-color, 0.2);
     pointer-events: none;
   }
 
@@ -118,6 +155,20 @@
 
   @media (max-width: $mobile) {
     width: 260px;
+  }
+}
+
+.form--modal .form__select {
+  border: 1px solid rgba($text-dark-color, 0.3);
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid rgba($text-dark-color, 1);
+  }
+
+  &:disabled {
+    background-color: rgba($text-dark-color, 0.2);
+    pointer-events: none;
   }
 }
 
@@ -141,33 +192,84 @@
   margin-bottom: 20px;
 
   @media (max-width: $mobile) {
-    margin-bottom: 0;
+    gap: 11px;
+    margin-bottom: -2px;
   }
 }
 
 .form__agreement-check {
+  position: relative;
+  top: -1px;
+
   appearance: none;
   width: 20px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+
+  background-color: $button-light-color;
   border-radius: 2px;
+  border: 1px solid rgba($button-light-color, 1);
+  opacity: 0.7;
 
   transition: background-color 0.3s ease-in-out;
 
   &:hover,
   &:focus-visible {
     outline: 0;
-    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 1;
+    background-color: rgba($button-light-color, 0.6);
+    pointer-events: none;
   }
 }
 
-.form__agreement-check:checked {
-  background-color: #ffffff;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 8px 6px;
-  mask-image: url("/__spritemap#sprite-check-view");
+.form--modal .form__agreement-check {
+  border: 1px solid rgba($text-dark-color, 1);
+}
 
+.form__agreement-check:checked {
+  position: relative;
+
+  background-color: #ffffff;
+  opacity: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+    background-color: $button-dark-color;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px;
+    mask-image: url("/__spritemap#sprite-check-view");
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: 0;
+    background-color: $button-dark-color;
+
+    &::before {
+      background-color: $button-light-color;
+    }
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    border-color: $disabled-color;
+    pointer-events: none;
+
+    &::before {
+      background-color: $button-light-color;
+    }
+  }
 }
 
 .form__agreement-text {
@@ -199,5 +301,16 @@
 
   @media (max-width: $mobile) {
     max-width: 260px;
+  }
+}
+
+.form--modal .form__submit {
+  @include button-style-light;
+
+  align-self: center;
+  width: 194px;
+
+  @media (max-width: $mobile) {
+    width: 260px;
   }
 }

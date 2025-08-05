@@ -67,7 +67,7 @@
   font-size: 32px;
   line-height: 36px;
   font-weight: 400;
-  color: #316dc2;
+  color: $text-accent-color;
 
   @media (max-width: $tablet) {
     margin-bottom: 30px;
@@ -108,9 +108,6 @@
 .about__button {
   @include button-style-light;
   @include button-disable-style;
-
-  @media (max-width: $mobile) {
-  }
 }
 
 .about__features {

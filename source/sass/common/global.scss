@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html:has(.body--no-scroll) {
+  scrollbar-gutter: stable;
+}
+
 *,
 *::before,
 *::after {
@@ -31,6 +35,8 @@ img {
 }
 
 .body {
+  position: relative;
+
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin: 0 auto;
@@ -41,9 +47,20 @@ img {
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
-  color: #484848;
+  color: $text-dark-color;
 
-  background-color: #F0EFE9;
+  background-color: $background-main-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-color: transparent;
+
+    transition: background-color 0.3s ease-in-out;
+  }
 
   @media (max-width: $tablet) {
     line-height: 20px;
@@ -55,7 +72,6 @@ img {
 }
 
 .body--no-scroll {
-  position: relative;
   overflow: hidden;
 
   &::before {
@@ -64,7 +80,7 @@ img {
     inset: 0;
     z-index: 2;
 
-    background-color: rgba(45, 56, 63, 0.6);
+    background-color: rgba(13, 29, 51, 0.4);
   }
 }
 
@@ -79,11 +95,11 @@ img {
 .section__title {
   margin: 0;
   margin-bottom: 30px;
-  
+
   font-size: 50px;
   line-height: 50px;
   font-weight: 400;
-  color: #316DC2;
+  color: $text-accent-color;
 
   @media (max-width: $tablet) {
     font-size: 34px;
@@ -110,5 +126,15 @@ img {
   @media (max-width: $mobile) {
     padding: 0 15px;
     width: 320px;
+  }
+}
+
+@keyframes fade-effect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

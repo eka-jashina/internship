@@ -17,10 +17,7 @@
     inset: 0;
     z-index: -1;
 
-    background-image: linear-gradient(
-      rgba(49, 109, 194, 0.2),
-      rgba(49, 109, 194, 0.2)
-    );
+    background-image: $shaded-overlay;
     border-radius: inherit;
   }
 
@@ -53,9 +50,9 @@
   font-size: 24px;
   line-height: 17px;
   font-weight: 400;
-  color: #316dc2;
+  color: $text-accent-color;
 
-  background-color: #ffffff;
+  background-color: $background-white-color;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 
@@ -82,7 +79,7 @@
   padding: 10px 18px;
   min-height: 84px;
 
-  background-color: #ffffff;
+  background-color: $background-white-color;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;

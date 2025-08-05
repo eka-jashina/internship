@@ -1,57 +1,16 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination, A11y, Grid } from 'swiper/modules';
+import { createPagination, updateSlideTabIndices } from './swiper-utils.js';
 
 let originalSlidesData = [];
 let swiperInstance = null;
 let isOriginalDataSaved = false;
 
-// Умная пагинация (до 4 кнопок, зависит от текущей страницы)
-
-function updatePagination(swiper) {
-  const paginationEl = document.querySelector('.news__pagination');
-  if (!paginationEl) return;
-
-  const group = swiper.params.slidesPerGroup || 1;
-  const gridRows = swiper.params.grid?.rows || 1;
-
-  // Считаем только видимые, НЕ дублированные и НЕ aria-hidden слайды
-  const realSlides = Array.from(swiper.slides).filter(
-    (slide) =>
-      !slide.classList.contains('swiper-slide-duplicate') &&
-      slide.getAttribute('aria-hidden') !== 'true' &&
-      slide.style.display !== 'none'
-  );
-
-  const totalItems = realSlides.length;
-  const itemsPerPage = group * gridRows;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const currentPage = Math.floor(swiper.realIndex / group) + 1;
-
-  let start = 1;
-  if (currentPage > 3 && currentPage < totalPages - 1) {
-    start = currentPage - 2;
-  } else if (currentPage >= totalPages - 1) {
-    start = totalPages - 3;
-  }
-
-  if (start < 1) start = 1;
-
-  paginationEl.innerHTML = '';
-
-  for (let i = start; i <= Math.min(start + 3, totalPages); i++) {
-    const btn = document.createElement('button');
-    btn.className = 'news__bullet' + (i === currentPage ? ' news__bullet--active' : '');
-    btn.textContent = i;
-    btn.addEventListener('click', () => {
-      swiper.slideTo((i - 1) * group);
-    });
-    paginationEl.appendChild(btn);
-  }
-}
-
 function initNewsSwiper(preserveOriginalData = false) {
   const container = document.querySelector('.news__swiper');
-  if (!container) return null;
+  if (!container) {
+    return null;
+  }
 
   if (!isOriginalDataSaved && !preserveOriginalData) {
     const slides = Array.from(container.querySelectorAll('.swiper-slide'));
@@ -63,17 +22,22 @@ function initNewsSwiper(preserveOriginalData = false) {
   }
 
   swiperInstance = new Swiper(container, {
-    modules: [Navigation, Pagination, Grid],
+    modules: [Navigation, Pagination, Grid, A11y],
     speed: 300,
     autoHeight: false,
+    watchSlidesProgress: true,
     pagination: {
       el: '.news__pagination',
       type: 'custom',
-      renderCustom: () => '', // Пусто, мы сами всё рендерим через updatePagination
+      renderCustom: () => '',
     },
     navigation: {
       nextEl: '.news__button--next',
       prevEl: '.news__button--prev',
+    },
+    a11y: {
+      enabled: true,
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
     },
     breakpoints: {
       320: {
@@ -89,7 +53,7 @@ function initNewsSwiper(preserveOriginalData = false) {
         grid: { rows: 2, fill: 'row' },
       },
       1440: {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 32,
       },
@@ -100,15 +64,22 @@ function initNewsSwiper(preserveOriginalData = false) {
     },
     on: {
       init() {
-        if (window.innerWidth < 1440) {
+        if (window.innerWidth < 768) {
           this.el.querySelectorAll('.swiper-slide').forEach((slide) => {
             slide.style.height = '';
           });
         }
-        updatePagination(this);
+        if (window.innerWidth > 1439) {
+          this.el.querySelectorAll('.swiper-slide').forEach((slide) => {
+            slide.style.width = '';
+          });
+        }
+        createPagination(this, 'news');
+        updateSlideTabIndices(this);
       },
       slideChange() {
-        updatePagination(this);
+        createPagination(this, 'news');
+        updateSlideTabIndices(this);
       },
       resize() {
         if (window.innerWidth < 768) {
@@ -116,7 +87,12 @@ function initNewsSwiper(preserveOriginalData = false) {
             slide.style.height = '';
           });
         }
-        updatePagination(this);
+        if (window.innerWidth > 1439) {
+          this.el.querySelectorAll('.swiper-slide').forEach((slide) => {
+            slide.style.width = '';
+          });
+        }
+        createPagination(this, 'news');
       },
     },
   });

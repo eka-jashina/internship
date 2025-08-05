@@ -1,7 +1,7 @@
 .contacts {
   padding: 120px 0 113px;
 
-  background-color: #316DC2;
+  background-color: $background-dark-color;
 
   @media (max-width: $tablet) {
     padding: 100px 0 96px;
@@ -25,7 +25,7 @@
 
 .contacts__title {
   margin-bottom: 0;
-  color: #ffffff;
+  color: $text-white-color;
 
   @media (max-width: $mobile) {
     margin-bottom: 4px;
@@ -65,7 +65,7 @@
 
   font-size: 12px;
   line-height: 12px;
-  color: #F0EFE9;
+  color: $text-light-color;
   letter-spacing: 0.12px;
   text-transform: uppercase;
 
@@ -83,7 +83,7 @@
 .contacts__info {
   margin: 0;
 
-  color: #ffffff;
+  color: $text-white-color;
 }
 
 .contacts__link {
@@ -93,6 +93,18 @@
 
   font-size: 16px;
   line-height: 17px;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:not([href]) {
+    color: $disabled-color;
+  }
 
   @media (max-width: $tablet) {
     line-height: 20px;
@@ -107,7 +119,7 @@
   grid-column: 1 / 3;
   padding-top: 40px;
 
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba($background-white-color, 0.2);
 
   @media (max-width: $tablet) {
     grid-column: 1 / 2;

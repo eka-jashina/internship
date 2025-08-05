@@ -1,7 +1,7 @@
 .main-nav {
   font-size: 16px;
   line-height: 16px;
-  color: #ffffff;
+  color: $text-white-color;
 }
 
 .main-nav__list {
@@ -41,7 +41,7 @@
   position: relative;
 
   padding-right: 22px;
-  
+
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
@@ -84,7 +84,7 @@
 .main-nav__button,
 .main-nav__link {
   transition: opacity 0.3s ease-in-out;
-  
+
   &:hover,
   &:focus-visible {
     opacity: 1;

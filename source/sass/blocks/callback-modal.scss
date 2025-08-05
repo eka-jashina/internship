@@ -1,0 +1,113 @@
+.callback-modal {
+  scrollbar-gutter: stable;
+  padding: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+  border-radius: 16px;
+  background-color: $background-white-color;
+
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+
+  &::backdrop {
+    background-color: transparent;
+  }
+}
+
+.callback-modal.callback-modal--opened {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.callback-modal.callback-modal--closing {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.callback-modal__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  color: $text-accent-color;
+  text-align: center;
+
+
+  @media (max-width: $tablet) {
+    font-size: 34px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.callback-modal__content {
+  position: relative;
+
+  padding: 60px 80px;
+  width: 510px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+
+  @media (max-width: $mobile) {
+    padding: 40px 15px;
+    width: 290px;
+  }
+}
+
+.callback-modal__text {
+  text-align: center;
+}
+
+.callback-modal__close {
+  @include button-reset;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: $button-dark-color;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 18px 18px;
+  mask-image: url("/__spritemap#sprite-menu-close-view");
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    pointer-events: none;
+  }
+
+  @media (max-width: $mobile) {
+    top: 20px;
+    right: 20px;
+
+    width: 16px;
+    height: 16px;
+
+    mask-size: 12px 12px;
+  }
+}

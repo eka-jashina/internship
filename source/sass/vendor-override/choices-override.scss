@@ -1,0 +1,108 @@
+.choices__inner {
+  min-height: 52px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+
+  transition: border 0.3s ease-in-out;
+}
+
+.form--modal .choices__inner {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.is-open .choices__inner,
+.is-focused .choices__inner {
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 8px;
+}
+
+.form--modal .is-open .choices__inner,
+.form--modal .is-focused .choices__inner {
+  border: 1px solid rgba(72, 72, 72, 1);
+}
+
+.choices__inner:hover {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.form--modal .choices__inner:hover {
+  border: 1px solid rgba(72, 72, 72, 1);
+}
+
+.choices__list--dropdown {
+  color: #484848;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  display: block;
+}
+
+.choices__list--dropdown.is-active {
+  margin: 3px 0;
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 8px;
+  pointer-events: auto;
+}
+
+.choices[data-type*="select-one"] {
+  min-height: 52px;
+}
+
+.choices[data-type*="select-one"]::after {
+  top: 50%;
+  right: 18px;
+  width: 16px;
+  height: 16px;
+
+  background-color: #ffffff;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("/__spritemap#sprite-menu-arrow-view");
+  border: none;
+
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  top: 50%;
+  margin-top: 0;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  padding: 17px 20px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.choices__item {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.choices.is-open .choices__item:first-of-type {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #ffffff;
+  color: rgba(49, 109, 194, 1);
+}

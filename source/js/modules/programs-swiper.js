@@ -9,7 +9,7 @@ function initProgramsSwiper() {
 
     pagination: {
       el: '.programs__pagination',
-      type: "progressbar",
+      type: 'progressbar',
     },
 
     navigation: {
@@ -22,7 +22,7 @@ function initProgramsSwiper() {
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 2.13,
+        slidesPerView: 2.126,
         spaceBetween: 30,
       },
       1440: {

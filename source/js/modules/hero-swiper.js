@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
-import {Pagination} from 'swiper/modules';
+import { Pagination, A11y } from 'swiper/modules';
 
 function initHeroSwiper() {
   const heroSwiper = new Swiper('.hero__swiper', {
-    modules: [Pagination],
+    modules: [Pagination, A11y],
     mousewheel: false,
     simulateTouch: false,
     slidesPerView: 1,
@@ -19,6 +19,11 @@ function initHeroSwiper() {
       clickable: true,
     },
 
+    a11y: {
+      enabled: true,
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
+    },
+
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -28,7 +33,8 @@ function initHeroSwiper() {
       slideChange: function () {
         this.slides.forEach((slide, index) => {
           const isActive = index === this.activeIndex;
-          slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
+          slide
+            .querySelectorAll('a, button, input, textarea, select, [tabindex]')
             .forEach((el) => {
               el.tabIndex = isActive ? 0 : -1;
             });

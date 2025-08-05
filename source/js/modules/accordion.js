@@ -1,6 +1,8 @@
 function openAccordion(target) {
   const button = target.closest('.accordion-button');
-  if (!button) return;
+  if (!button) {
+    return;
+  }
 
   const panel = button.nextElementSibling;
 
@@ -10,7 +12,9 @@ function openAccordion(target) {
 
 function toggleAccordion(target) {
   const button = target.closest('.accordion-button');
-  if (!button) return;
+  if (!button) {
+    return;
+  }
 
   const panel = button.nextElementSibling;
   const isActive = button.classList.contains('accordion--open');

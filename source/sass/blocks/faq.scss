@@ -30,7 +30,7 @@
 
 .faq__item {
   padding: 40px;
-  border: 2px solid #316DC2;
+  border: 2px solid $background-dark-color;
   border-radius: 16px;
 
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -43,13 +43,12 @@
     padding: 20px 15px;
 
     border-radius: 14px;
-
   }
 }
 
 .faq__item:has(.accordion--open) {
-  color: #F0EFE9;
-  background-color: #316DC2;
+  color: $text-light-color;
+  background-color: $background-dark-color;
 }
 
 .faq__question {
@@ -64,7 +63,7 @@
 
   font-size: 28px;
   line-height: 34px;
-  color: #316DC2;
+  color: $text-accent-color;
   text-align: left;
 
   transition: color 0.3s ease-in-out;
@@ -85,11 +84,11 @@
   }
 
   &::before {
-    background-color: #316DC2;
+    background-color: $button-dark-color;
   }
 
   &::after {
-    background-color: #ffffff;
+    background-color: $button-light-color;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 20px 20px;
@@ -99,23 +98,23 @@
   &:hover,
   &:focus-visible {
     &::before {
-      outline: 1px solid #316DC2;
+      outline: 1px solid $button-dark-color;
       background-color: transparent;
     }
 
     &::after {
-      background-color: #316DC2;
+      background-color: $button-dark-color;
     }
   }
 
   &:active {
     &::before {
       outline: 0;
-      background-color: #275699;
+      background-color: $button-dark-color;
     }
 
     &::after {
-      background-color: #ffffff;
+      background-color: $button-light-color;
     }
   }
 
@@ -123,7 +122,7 @@
     pointer-events: none;
 
     &::before {
-      background-color: #A9AFB7;
+      background-color: $disabled-color;
     }
   }
 
@@ -139,37 +138,37 @@
 }
 
 .faq__question.accordion--open {
-  color: #ffffff;
+  color: $text-white-color;
 
   &::before {
-    background-color: #ffffff;
+    background-color: $button-light-color;
   }
 
   &::after {
-    background-color: #316DC2;
+    background-color: $button-dark-color;
     mask-image: url("/__spritemap#sprite-minus-view");
   }
 
   &:hover,
   &:focus-visible {
     &::before {
-      outline: 1px solid #ffffff;
+      outline: 1px solid $button-light-color;
       background-color: transparent;
     }
 
     &::after {
-      background-color: #ffffff;
+      background-color: $button-light-color;
     }
   }
 
   &:active {
     &::before {
       outline: 0;
-      background-color: #ffffff;
+      background-color: $button-light-color;
     }
 
     &::after {
-      background-color: #275699;
+      background-color: $button-dark-color;
     }
   }
 }
@@ -179,7 +178,7 @@
   width: calc(100% - 50px);
 
   @media (max-width: $mobile) {
-      width: calc(100% - 40px);
+    width: calc(100% - 40px);
   }
 }
 

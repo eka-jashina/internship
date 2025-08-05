@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination } from 'swiper/modules';
-import { setMaxSlideHeight } from './swiper-utils.js'
+import { setMaxSlideHeight } from './swiper-utils.js';
 
 function createReviewsSwiper() {
   return new Swiper('.reviews__swiper', {

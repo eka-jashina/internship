@@ -1,5 +1,5 @@
 {
-  "name": "accelerator-first-project",
+  "name": "Internships",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -17,7 +17,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --fix",
     "lint-js": "eslint source/js --fix",
     "ls-lint": "ls-lint",
-    "editorconfig": "editorconfig-cli"
+    "editorconfig": "editorconfig-cli",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
@@ -49,6 +50,8 @@
     "w3c-html-validator": "1.7.0"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
+    "puppeteer": "^24.15.0",
     "swiper": "11.1.3"
   },
   "engines": {
